@@ -6,7 +6,7 @@ import Nav from "@/components/Nav/Nav";
 
 export const metadata: Metadata = {
   title: "Clarkybox Design",
-  description: "UX & Product Design. Based out of Asheville, NC.",
+  description: "UX & Product Design based out of Asheville, NC",
 };
 
 export default function RootLayout({
