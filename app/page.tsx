@@ -11,8 +11,8 @@ export default function Home() {
   return (
     <main>
       <Hero />
-      <section>
-        <div className="wrapper">
+      <section id='projects'>
+        <div className='wrapper'>
           <h2>Projects</h2>
           <div className="project-list">
             {postMetadata.map((post) => {
