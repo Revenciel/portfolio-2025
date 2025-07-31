@@ -1,0 +1,110 @@
+@font-face {
+  font-family: Canterbury;
+  src: //'../public/fonts/Canterbury-Regular.woff2' format('woff2'),
+       url('../public/fonts/Canterbury-Regular.woff') format('woff');
+}
+
+:root {
+  // colors
+  --dark-black: #151515;
+  --med-black: #222022;
+  --light-black: #2c292b;
+  --c-text: #d6c5c9;
+
+  // spacing
+  --s-lg: 48px; //section padding
+  --s-md: 32px; //section gap
+  --s-sm: 24px; //card padding
+
+  --s--xsm: 16px;
+  --s-xxsm: 8px;
+  --s-xxxsm: 4px;
+
+  --r-sm:4px;
+}
+
+@media only screen and (max-width: 1080px) {
+  :root {
+    --s-lg: 24px;
+    --s-md: 24px;
+    --s-sm: 16px;
+  }
+}
+
+/* @media (prefers-color-scheme: dark) {
+  :root {
+    --background: #0a0a0a;
+    --foreground: #ededed;
+  }
+} */
+
+html,
+body {
+  max-width: 100vw;
+  overflow-x: hidden;
+
+  font-size: 16px;
+  line-height: 1.5;
+  letter-spacing: +0.5%;
+}
+
+body {
+  color: var(--c-text);
+  background: var(--med-black);
+  font-family: Arial, Helvetica, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+h1 {
+  font-size: 48px;
+  line-height: 1.1;
+  letter-spacing: -2%;
+}
+
+h2 {
+  font-size: 64px;
+  line-height: 1.1;
+  letter-spacing: -2%;
+
+  font-family: 'Canterbury', 'Courier New', monospace;
+
+  background-color: aquamarine;
+  background-image: url('../public/images/h1-background.png');
+  width: 144px; /* sizing square */
+  height: 144px; /* sizing square */
+  padding-top: 40px; /* positioning square */
+  padding-left: 24px; /* positioning square */
+  //margin-left: -24px; /* use to align to text, not to square */
+  //margin-bottom: -48px;
+  border-radius: var(--r-sm); /* rounding square */
+  white-space: nowrap;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+section {
+  padding: var(--s-lg);
+
+  .wrapper {
+    max-width: 1200px;
+    display: flex;
+    gap: var(--s-md);
+    flex-direction: column;
+  }
+}
+
+/* @media (prefers-color-scheme: dark) {
+  html {
+    color-scheme: dark;
+  }
+} */
