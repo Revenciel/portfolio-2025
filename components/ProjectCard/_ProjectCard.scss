@@ -1,0 +1,38 @@
+@use '../../app/design-tokens' as *;
+
+.project-list {
+  display: flex;
+  gap: $s-md;
+  flex-direction: column;
+  //flex-wrap: nowrap;
+
+  .project-card {
+    $image-size: 320px;
+    position: relative;
+    width: 100%;
+    min-height: $image-size;
+
+    img {
+      width: $image-size;
+      height: $image-size;
+      border-radius: $r-md;
+      position: absolute;
+    }
+
+    .text {
+      background-color: $c-light-black;
+      width: calc(100% - $s-md);
+      min-height: $image-size;
+      padding: $s-sm;
+      padding-left: $image-size;
+      margin-left: $s-md;
+      margin-top: $s-md;
+      border-radius: $r-md;
+
+      .date {
+        position: absolute;
+        right: $s-md;
+      }
+    }
+  }
+}
