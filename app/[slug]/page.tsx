@@ -53,6 +53,10 @@ export default function ProjectPage(props: { params: { slug: string } }) {
     <main>
       <article>
         <Markdown>{post.content}</Markdown>
+        <p>At Home Solutions, a small team of devs and one designer (that’s me!) manages marketing landing pages for over a dozen brands. We have to work quickly to keep up with partner requests while continuously testing changes to improve conversion rates. But working so fast came at a cost: inconsistencies forced devs to recreate similar designs from scratch every time we made a new site. Content editors frequently violated accessibility guidelines because there weren’t enough guardrails for them in the CMS. And our sites didn’t look trustworthy, because our piecemeal approach to improvements resulted in a lack of internal consistency. In short, we had a mess on our hands.
+
+When our engineering director announced we were going to migrate to a new CMS, I proposed standardizing all our sites with a multi-brand design system. Since we were going to re-code our websites anyways, the team was receptive when I explained how a design system would drastically accelerate launching new sites, streamline implementing CRO wins across brands, bake accessibility into the process.
+</p>
       </article>
     </main>
   );

@@ -22,7 +22,8 @@ body {
 body {
   color: $c-text;
   background: $c-med-black;
-  font-family: Arial, Helvetica, sans-serif;
+  //font-family: Arial, Helvetica, sans-serif;
+  font: 500 16px var(--f-fira-sans);
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
@@ -34,7 +35,7 @@ body {
 }
 
 h1 {
-  font-size: 48px;
+  font: 700 48px var(--f-fira-mono);
   line-height: 1.1;
   letter-spacing: -2%;
 }
@@ -42,7 +43,7 @@ h1 {
 h2 {
   font-size: 64px;
   line-height: 1.1;
-  letter-spacing: -2%;
+  letter-spacing: 10%;
 
   font-family: "Canterbury", "Courier New", monospace;
 
@@ -72,4 +73,43 @@ section {
     gap: $s-md;
     flex-direction: column;
   }
+}
+
+///// NAV
+
+/* MENU */
+nav{
+    position:fixed;
+    top:3rem;
+    right:6rem;
+    text-align:right;
+    z-index:1;
+    font-family: "Canterbury", "Courier New", monospace;
+    font-size:24px;
+    letter-spacing:10%;
+}
+
+nav img{
+    height: 3rem;
+}
+nav li{
+    list-style-type:none;
+}
+nav li a{
+    display:block; /* enables the sqare background */
+
+    width:64px; /* sizing square */
+    height:64px; /* sizing square */
+    padding-top:.85rem; /* positioning square */
+    padding-left:.5rem; /* positioning square */
+    margin-left:-2.5rem; /* correcting for padding */
+    border-radius: $r-sm;
+    background-color:#72227D;
+
+    margin-bottom:1rem;
+}
+nav li a:hover{
+    color:var(--purple);
+    letter-spacing:.2em;
+    background-color:var(--pink);
 }
