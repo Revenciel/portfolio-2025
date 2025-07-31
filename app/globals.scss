@@ -34,13 +34,13 @@ body {
   margin: 0;
 }
 
-h1 {
+#home h1 {
   font: 700 48px var(--f-fira-mono);
   line-height: 1.1;
   letter-spacing: -2%;
 }
 
-h2 {
+#home h2, .project hgroup {
   font-size: 64px;
   line-height: 1.1;
   letter-spacing: 10%;

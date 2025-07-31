@@ -9,7 +9,7 @@ export default function Home() {
   const postMetadata = getPostMetadata('projects')
 
   return (
-    <main>
+    <main id="home">
       <Hero />
       <section id='projects'>
         <div className='wrapper'>
