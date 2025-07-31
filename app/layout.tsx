@@ -14,7 +14,7 @@ const fira_mono = Fira_Mono({
 })
 
 const fira_sans = Fira_Sans({
-  weight: ['500','700'],
+  weight: ['300','400','700'],
   subsets: ['latin'],
   style: ['italic','normal'],
   variable: '--f-fira-sans',
