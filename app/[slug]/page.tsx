@@ -1,12 +1,7 @@
 import React from 'react'
 //import { notFound } from 'next/navigation'
-import fs from 'fs'
-import path from 'path'
-import matter from 'gray-matter'
-import { serialize } from 'next-mdx-remote/serialize'
-
 import { getProjectMdxBySlug, getAllProjectSlugs } from '@/utils/getProjectMdx'
-import dynamic from 'next/dynamic'
+import { mdxComponents } from '@/components/MDXComponents/MDXComponents'
 
 // This generates pages statically (i.e. at build time) for every project, using getPostMetadata to get the slugs of the mdx files.
 export async function generateStaticParams() {
@@ -21,19 +16,15 @@ export async function generateMetadata({ params }: { params: { slug: string } })
   }
 }
 
-export default function ProjectPage({ params }: { params: { slug: string } }) {
-  const { slug } = params
-  const { metadata } = getProjectMdxBySlug(slug)
+export default async function ProjectPage({ params }: { params: { slug: string } }) {
+  const { content, metadata } = getProjectMdxBySlug(params.slug)
 
-  // MDX is compiled at build time, so you import it statically:
-  const MdxComponent = dynamic(() => import(`@/projects/${slug}.mdx`), {
-    ssr: true,
-  })
+  const MdxContent = require(`@/projects/${params.slug}.mdx`).default
 
   return (
     <main className="project">
       <article>
-        <MdxComponent />
+        <MdxContent components={mdxComponents} />
       </article>
     </main>
   )
