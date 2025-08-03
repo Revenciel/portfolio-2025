@@ -8,12 +8,14 @@ export default function ProjectCard(props: { post: any }) { //fix type here
       <Image src='/images/semi-transparent.png' alt='placeholder' width={400} height={400} />
       {/* <Image src={post.image} alt='placeholder' width={400} height={400} /> */}
       <div className='text'>
-        <p className='date'>{post.date}</p>
-        <h3>Role</h3>
-        <p>{post.role}</p>
-        <h3>Task</h3>
-        <p>{post.task}</p>
-        <Link href={`/${post.slug}`}>CALL TO ACTION</Link>
+        <div className='heading'>
+          <p>{post.keyword1}</p>
+          <p>{post.keyword2}</p>
+          <p>{post.keyword3}</p>
+          <p>{post.date}</p>
+        </div>
+        <p>{post.summary}</p>
+        <Link href={`/${post.slug}`}>{post.ctaLabel}</Link>
       </div>
     </div>
   );

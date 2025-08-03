@@ -6,7 +6,8 @@ import ProjectCard from "@/components/ProjectCard/ProjectCard";
 
 export default function Home() {
 
-  const postMetadata = getPostMetadata('projects')
+  // remove 'temp' once I've solved bug with metadata appearing in post body, and delete the temp folder
+  const postMetadata = getPostMetadata('projects/temp')
 
   return (
     <main id="home">
@@ -20,11 +21,6 @@ export default function Home() {
                 <ProjectCard
                   key={post.slug}
                   post={post}
-                // slug={post.slug} 
-                // date={post.date} 
-                // role={post.role} 
-                // task={post.task} 
-                // solution={post.solution} 
                 />
               )
             })}

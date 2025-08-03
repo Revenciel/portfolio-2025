@@ -13,10 +13,12 @@ export default function getPostMetadata(basePath: string) {
         return {
             title: matterResult.data.title,
             image: matterResult.data.image,
+            imageAltText: matterResult.data.imageAltText,
             date: matterResult.data.date,
-            role: matterResult.data.role,
-            task: matterResult.data.task,
-            solution: matterResult.data.solution || null,
+            keyword1: matterResult.data.keyword1,
+            keyword2: matterResult.data.keyword2,
+            keyword3: matterResult.data.keyword3,
+            summary: matterResult.data.summary,
             //other metadata here
             slug: filename.replace('.mdx', '')
         }
