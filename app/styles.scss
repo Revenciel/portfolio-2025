@@ -1,8 +1,9 @@
-@use "./design-tokens" as *;
-@use "../components/Hero/Hero" as *;
-@use "../components/ProjectCard/ProjectCard" as *;
-@use "../components/CTA/CTA" as *;
-@use "../components/Carousel/Carousel" as *;
+@use '../design-tokens' as *;
+@use '../components/Hero/Hero' as *;
+@use '../components/ProjectCard/ProjectCard' as *;
+@use '../components/CTA/CTA' as *;
+@use '../components/Carousel/Carousel' as *;
+@use '../components/Nav/Nav' as *;
 
 html,
 body {
@@ -41,7 +42,6 @@ body {
   padding-left: 24px; /* positioning square */
   //margin-left: -24px; /* use to align to text, not to square */
   //margin-bottom: -48px;
-  border-radius: $r-sm; /* rounding square */
   white-space: nowrap;
 }
 
@@ -54,6 +54,7 @@ section {
   padding: $s-lg;
 
   .wrapper {
+    margin-right: $nav-width;
     max-width: 1200px;
     display: flex;
     gap: $s-md;
@@ -61,44 +62,150 @@ section {
   }
 }
 
-// *********** NAV
-nav {
-  position: fixed;
-  top: 3rem;
-  right: 6rem;
-  text-align: right;
-  z-index: 1;
-  letter-spacing: 10%;
-}
-
-nav img {
-  height: 3rem;
-}
-nav li {
-  list-style-type: none;
-}
-nav li a {
-  display: block; /* enables the sqare background */
-
-  width: 64px; /* sizing square */
-  height: 64px; /* sizing square */
-  padding-top: 0.85rem; /* positioning square */
-  padding-left: 0.5rem; /* positioning square */
-  margin-left: -2.5rem; /* correcting for padding */
-  border-radius: $r-sm;
-  background-color: #72227d;
-
-  margin-bottom: 1rem;
-}
-nav li a:hover {
-  color: var(--purple);
-  letter-spacing: 0.2em;
-  background-color: var(--pink);
-}
-
 // *********** HOME PAGE
 #illustration {
   background-color: $c-med-black;
+}
+
+///////
+/// ////
+/// ////
+/// ////
+/// ///
+///
+.carouselWrapper {
+  width: 100%;
+  max-width: 80rem;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+}
+
+.iconBox {
+  width: 4rem;
+  height: 4rem;
+  background: linear-gradient(
+    to bottom right,
+    var(--accent),
+    var(--primary),
+    rgba(var(--accent-rgb), 0.8)
+  );
+  border-radius: 0.75rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.iconLabel {
+  color: var(--primary-foreground);
+  font-weight: bold;
+  font-size: 1.125rem;
+}
+
+.title {
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: var(--foreground);
+}
+
+.carouselContainer {
+  position: relative;
+}
+
+.navigationButton {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 10;
+  width: 3rem;
+  height: 3rem;
+  background-color: rgba(var(--background-rgb), 0.1);
+  backdrop-filter: blur(4px);
+  border: 1px solid rgba(var(--border-rgb), 0.2);
+  border-radius: 9999px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.navigationButton:hover {
+  background-color: rgba(var(--background-rgb), 0.2);
+  transform: translateY(-50%) scale(1.1);
+}
+
+.leftButton {
+  left: 1rem;
+}
+
+.rightButton {
+  right: 1rem;
+}
+
+.carouselViewport {
+  overflow: hidden;
+  border-radius: 1rem;
+  height: 320px;
+}
+
+.carouselTrack {
+  display: flex;
+  height: 100%;
+  transition: transform 0.5s ease-out;
+}
+
+.imageSlide {
+  position: relative;
+  flex: none;
+}
+
+.image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 0.75rem;
+  transition: all 0.5s ease-out;
+}
+
+.visible {
+  filter: none;
+  box-shadow: var(--carousel-shadow);
+}
+
+.dimmed {
+  filter: brightness(50%);
+  transform: scale(0.9375);
+}
+
+.hoverOverlay {
+  position: absolute;
+  inset: 0;
+  background-color: rgba(var(--primary-rgb), 0.1);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  border-radius: 0.75rem;
+}
+
+.imageSlide:hover .hoverOverlay {
+  opacity: 1;
+}
+
+.progressBarBackground {
+  margin-top: 1.5rem;
+  position: relative;
+  width: 100%;
+  height: 0.25rem;
+  background-color: rgba(var(--border-rgb), 0.3);
+  border-radius: 9999px;
+}
+
+.progressBar {
+  position: absolute;
+  height: 100%;
+  width: 2rem;
+  border-radius: 9999px;
+  background: var(--carousel-progress);
+  transition: all 0.5s ease-out;
 }
 
 ////////
@@ -112,26 +219,25 @@ nav li a:hover {
   height: 400px;
 
   .wrapper {
-    height:100%;
+    height: 100%;
     align-items: center;
     flex-direction: row;
-    padding-left: 240px; //set this as absolute on larger screens, and as vw on smaller screens
+    padding-left: 232px; //set this as absolute on larger screens, and as vw on smaller screens
   }
 
   .text {
     display: flex;
-    flex-direction:column;
-    gap:$s-xs;
+    flex-direction: column;
+    gap: $s-xs;
     color: $c-med-black;
-    max-width:720px;
-    span{
-      font-size:20px;
+    max-width: 720px;
+    span {
+      font-size: 20px;
     }
     h1 {
-      font: 400 64px var(--f-nicolatte), "Courier New", monospace;
+      font: 400 56px var(--f-nicolatte), "Courier New", monospace;
       line-height: 1.1;
-      letter-spacing: 10%;
-        
+      letter-spacing: 7%;
     }
 
     ul {
@@ -139,7 +245,7 @@ nav li a:hover {
       flex-wrap: wrap;
       gap: $s-xxs $s-md;
       list-style: "+ " inside;
-      font-size: 26px;
+      font-size: 24px;
     }
   }
 }

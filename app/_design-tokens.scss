@@ -8,21 +8,14 @@ $c-light-black: #2c292b;
 $c-text: #BBC7C4;
 $c-heading: #EBEFEE;
 
+$nav-width:var(--nav-width);
+
 /* @media (prefers-color-scheme: dark) {
   :root {
     --background: #0a0a0a;
     --foreground: #ededed;
   }
 } */
-/* @media (prefers-color-scheme: dark) {
-  html {
-    color-scheme: dark;
-  }
-} */
-
-// corner radii
-$r-sm: 4px;
-$r-md: 8px;
 
 // spacing
 // - SCSS variables for consistency
@@ -36,10 +29,14 @@ $r-md: 8px;
   --s-xxs: 8px;
   --s-xxxs: 4px;
 
+  --nav-width:198px;
+
   @media only screen and (max-width: 1079px) {
     --s-lg: 24px;
     --s-md: 24px;
     --s-sm: 16px;
+    
+    --nav-width:0px;//64 (square size) + a constant based on the longest nav word + (16) value of nav 'right' property + (32) gap between nav and main content
   }
 }
 

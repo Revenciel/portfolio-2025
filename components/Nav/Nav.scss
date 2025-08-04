@@ -1,0 +1,63 @@
+@use '../../app/design-tokens' as *;
+
+nav {
+  position: fixed;
+  top: $s-sm;
+  right: $s-sm;
+  padding-right: 100px;
+  text-align: right;
+  z-index: 1;
+
+  ul li {
+    list-style-type: none;
+  }
+  a {
+    display: block; /* enables the sqare background */
+
+    width: 64px; /* sizing square */
+    height: 64px; /* sizing square */
+    padding-top: 20px; /* positioning square */
+    padding-left: $s-xs; /* positioning square */
+    margin-bottom: $s-xs;
+
+    background-color: $c-primary;
+    color: $c-med-black;
+    font-size: 18px;
+    letter-spacing: 10%;
+    text-transform: uppercase;
+    font-weight: bold;
+
+    transition: all 0.2s ease-in;
+
+    &:hover {
+      background-color: $c-primary-30;
+    }
+  }
+}
+
+@media screen and (max-width: 1079px) {
+  nav {
+    top: 0;
+    right: auto;
+    width: 100%;
+    padding: $s-xxs $s-lg;
+    background-color: $c-med-black;
+    
+    ul {
+      width:100%;
+      margin:0 auto;
+      display:flex;
+      justify-content:center;
+      gap: $s-md;
+      //align-items:center;
+      li a {
+        color:$c-text;
+        width: auto;
+        height: auto;
+        margin: 0;
+        padding: 0;
+        background-color: transparent;
+      }
+    }
+  }
+}
