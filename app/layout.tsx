@@ -1,23 +1,41 @@
 import type { Metadata } from "next";
+import localFont from 'next/font/local';
 
-import "./globals.scss";
+import "./styles.scss";
 import Footer from "@/components/Footer/Footer";
 import Nav from "@/components/Nav/Nav";
 
-import { Fira_Mono } from 'next/font/google'
-import { Fira_Sans } from 'next/font/google'
- 
-const fira_mono = Fira_Mono({
-  weight: ['500','700'],
-  subsets: ['latin'],
-  variable:'--f-fira-mono',
+const meltmino = localFont({
+  src: [
+    {
+      path: './fonts/Meltmino-Regular.woff2',
+      weight: '400',
+      style: 'normal',
+    },
+    {
+      path: './fonts/Meltmino-Italic.woff2',
+      weight: '400',
+      style: 'italic',
+    },
+    {
+      path: './fonts/Meltmino-Bold.woff2',
+      weight: '700',
+      style: 'normal',
+    },
+    {
+      path: './fonts/Meltmino-BoldItalic.woff2',
+      weight: '700',
+      style: 'italic',
+    },
+  ],
+  variable: '--f-meltmino',
 })
 
-const fira_sans = Fira_Sans({
-  weight: ['300','400','700'],
-  subsets: ['latin'],
-  style: ['italic','normal'],
-  variable: '--f-fira-sans',
+const nicolatte = localFont({
+  src: './fonts/Nicolatte-Regular.woff2',
+  weight: '400',
+  style: 'normal',
+  variable: '--f-nicolatte',
 })
 
 export const metadata: Metadata = {
@@ -32,7 +50,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${fira_mono.variable} ${fira_sans.variable}`}>
+      <body className={`${nicolatte.variable} ${meltmino.className}`}>
         <Nav />
         {children}
         <Footer />
