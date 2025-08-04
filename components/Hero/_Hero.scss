@@ -1,27 +1,2 @@
 @use '../../app/design-tokens' as *;
 
-.hero {
-    background-color: $c-dark-black;
-
-    .wrapper{
-        align-items:center;
-        flex-direction:row;
-    }
-
-    img{
-        width:auto;
-        height:196px;
-    }
-
-    .text{
-        display: inline-block;
-
-        ul{
-            display:flex;
-            flex-wrap:wrap;
-            gap: $s-md;
-            list-style:"+ " inside;
-            font-size:24px;
-        }
-    }
-}

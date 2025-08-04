@@ -4,8 +4,8 @@ export default function Hero() {
   return (
     <section className='hero'>
       <div className='wrapper'>
-        <Image src='/images/logo.png' alt='Logo' width={400} height={400} />
         <div className='text'>
+          <span>Clarkybox Design</span>
           <h1>UX & Product Design</h1>
           <ul>
             <li>Design Systems</li>
@@ -17,7 +17,6 @@ export default function Hero() {
           </ul>
         </div>
       </div>
-
     </section>
   );
 }

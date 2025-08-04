@@ -1,8 +1,8 @@
-@use './design-tokens' as *;
-@use '../components/Hero/Hero' as *;
-@use '../components/ProjectCard/ProjectCard' as *;
-@use '../components/CTA/CTA' as *;
-@use '../components/Carousel/Carousel' as *;
+@use "./design-tokens" as *;
+@use "../components/Hero/Hero" as *;
+@use "../components/ProjectCard/ProjectCard" as *;
+@use "../components/CTA/CTA" as *;
+@use "../components/Carousel/Carousel" as *;
 
 html,
 body {
@@ -27,20 +27,14 @@ body {
   margin: 0;
 }
 
-#home h1 {
-  font: 400 48px var(--f-nicolatte), "Courier New", monospace;
-  line-height: 1.1;
-  letter-spacing: -2%;
-}
-
 #home h2,
 .project hgroup {
   font: 700 48px var(--f-nicolatte), "Courier New", monospace;
   line-height: 1.5;
   letter-spacing: 10%;
 
-  background-image: url("../public/images/h1-background.png");
-  color:$c-heading;
+  background-image: url("../public/images/h1-bg.png");
+  color: $c-heading;
   width: 144px; /* sizing square */
   height: 144px; /* sizing square */
   padding-top: 40px; /* positioning square */
@@ -104,6 +98,48 @@ nav li a:hover {
 
 // *********** HOME PAGE
 #illustration {
-  background-color:$c-med-black;;
+  background-color: $c-med-black;
 }
 
+////////
+
+.hero {
+  background-color: $c-dark-black;
+  background-image: url("/images/hero-bg.png"), url("/images/hero-bg-2.png");
+  background-position: left;
+  background-size: auto 400px, auto;
+  background-repeat: no-repeat, repeat;
+  height: 400px;
+
+  .wrapper {
+    height:100%;
+    align-items: center;
+    flex-direction: row;
+    padding-left: 240px; //set this as absolute on larger screens, and as vw on smaller screens
+  }
+
+  .text {
+    display: flex;
+    flex-direction:column;
+    gap:$s-xs;
+    color: $c-med-black;
+    max-width:720px;
+    span{
+      font-size:20px;
+    }
+    h1 {
+      font: 400 64px var(--f-nicolatte), "Courier New", monospace;
+      line-height: 1.1;
+      letter-spacing: 10%;
+        
+    }
+
+    ul {
+      display: flex;
+      flex-wrap: wrap;
+      gap: $s-xxs $s-md;
+      list-style: "+ " inside;
+      font-size: 26px;
+    }
+  }
+}
