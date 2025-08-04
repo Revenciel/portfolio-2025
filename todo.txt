@@ -1,0 +1,4 @@
+Motion design
+- Carousel: smooth transitions? Current item grows larger?
+-CTAs: Arrow moves, other motion...?
+- animate-in effects
