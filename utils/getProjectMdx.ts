@@ -1,6 +1,7 @@
 import fs from 'fs'
 import path from 'path'
 import matter from 'gray-matter'
+import { notFound } from 'next/navigation'
 
 export function getAllProjectSlugs() {
     const files = fs.readdirSync(path.join(process.cwd(), 'projects'))
@@ -10,8 +11,14 @@ export function getAllProjectSlugs() {
 }
 
 export function getProjectMdxBySlug(slug: string) {
+    
     const filepath = path.join(process.cwd(), 'projects', `${slug}.mdx`)
+    
+    if (!fs.existsSync(filepath)){
+        notFound();
+    }
     const source = fs.readFileSync(filepath, 'utf8')
+    
     const { data, content } = matter(source)
 
     return {
