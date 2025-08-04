@@ -1,7 +1,8 @@
-import getPostMetadata from "@/utils/getPostMetadata";
+import getPostMetadata from '@/utils/getPostMetadata'
 //import Image from "next/image";
-import Hero from "@/components/Hero/Hero";
-import ProjectCard from "@/components/ProjectCard/ProjectCard";
+import Hero from '@/components/Hero/Hero'
+import ProjectCard from '@/components/ProjectCard/ProjectCard'
+import { IllustrationCarousel } from '@/components/Carousel/Carousel'
 
 
 export default function Home() {
@@ -25,6 +26,12 @@ export default function Home() {
               )
             })}
           </div>
+        </div>
+      </section>
+      <section id='illustration'>
+        <div className='wrapper'>
+          <h2>Illustration</h2>
+          <p>Coming soon...</p>
         </div>
       </section>
     </main>

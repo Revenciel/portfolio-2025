@@ -19,7 +19,7 @@ export default function getPostMetadata(basePath: string) {
             keyword2: matterResult.data.keyword2,
             keyword3: matterResult.data.keyword3,
             summary: matterResult.data.summary,
-            //other metadata here
+            ctaLabel: matterResult.data.ctaLabel,
             slug: filename.replace('.mdx', '')
         }
     })

@@ -1,0 +1,109 @@
+@use './design-tokens' as *;
+@use '../components/Hero/Hero' as *;
+@use '../components/ProjectCard/ProjectCard' as *;
+@use '../components/CTA/CTA' as *;
+@use '../components/Carousel/Carousel' as *;
+
+html,
+body {
+  max-width: 100vw;
+  overflow-x: hidden;
+  font-size: 16px;
+  line-height: 1.5;
+  letter-spacing: +0.5%;
+}
+
+body {
+  color: $c-text;
+  background: $c-dark-black;
+  font: 400 16px var(--f-meltmino), "Courier New", monospace;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+#home h1 {
+  font: 400 48px var(--f-nicolatte), "Courier New", monospace;
+  line-height: 1.1;
+  letter-spacing: -2%;
+}
+
+#home h2,
+.project hgroup {
+  font: 700 48px var(--f-nicolatte), "Courier New", monospace;
+  line-height: 1.5;
+  letter-spacing: 10%;
+
+  background-image: url("../public/images/h1-background.png");
+  color:$c-heading;
+  width: 144px; /* sizing square */
+  height: 144px; /* sizing square */
+  padding-top: 40px; /* positioning square */
+  padding-left: 24px; /* positioning square */
+  //margin-left: -24px; /* use to align to text, not to square */
+  //margin-bottom: -48px;
+  border-radius: $r-sm; /* rounding square */
+  white-space: nowrap;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+section {
+  padding: $s-lg;
+
+  .wrapper {
+    max-width: 1200px;
+    display: flex;
+    gap: $s-md;
+    flex-direction: column;
+  }
+}
+
+// *********** NAV
+nav {
+  position: fixed;
+  top: 3rem;
+  right: 6rem;
+  text-align: right;
+  z-index: 1;
+  letter-spacing: 10%;
+}
+
+nav img {
+  height: 3rem;
+}
+nav li {
+  list-style-type: none;
+}
+nav li a {
+  display: block; /* enables the sqare background */
+
+  width: 64px; /* sizing square */
+  height: 64px; /* sizing square */
+  padding-top: 0.85rem; /* positioning square */
+  padding-left: 0.5rem; /* positioning square */
+  margin-left: -2.5rem; /* correcting for padding */
+  border-radius: $r-sm;
+  background-color: #72227d;
+
+  margin-bottom: 1rem;
+}
+nav li a:hover {
+  color: var(--purple);
+  letter-spacing: 0.2em;
+  background-color: var(--pink);
+}
+
+// *********** HOME PAGE
+#illustration {
+  background-color:$c-med-black;;
+}
+
