@@ -1,28 +1,53 @@
-@use '../../app/design-tokens' as *;
+@use "../../app/design-tokens" as *;
 
 .cta {
-        display: flex;
-        justify-content: space-between;
-        max-width: 320px;
+  position: relative;
+  z-index: 0;
+  max-width: 320px;
+  height: 48px;
+  color: $c-med-black;
+  background-color: $c-primary;
+  text-transform: uppercase;
+  letter-spacing: 20%;
+  font-size: 18px;
+  font-weight: 700;
+  overflow: hidden;
 
-      // replace this once text-box has wider support
-        padding: 0 24px;
-        height: 48px;
-        align-items: center;
-      //...with this:
-        //padding: $s-xs $s-sm;
-        //text-box: trim-both cap alphabetic;
+  a {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 24px;
+    height:100%;
 
-        color: $c-med-black;
-        background-color: $c-primary;
+    .label {
+      position: relative;
+      z-index: 1; // Now above the pseudo-element
+      display: flex;
+      align-items: center;
+      width: 100%;
+      justify-content: space-between;
+    }
 
-        text-transform: uppercase;
-        letter-spacing: 20%;
-        font-size: 18px;
-        font-weight: 700;
+    .icon {
+      width: 24px;
+      height: 24px;
+    }
+  }
 
-        .icon {
-          width: 24px;
-          height: 24px;
-        }
-      }
+  &::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background-image: url("/images/cta-hover-bg.png");
+    background-size: cover;
+    background-position: center;
+    opacity: 0;
+    transition: opacity 0.2s ease-in;
+    z-index: 0;
+  }
+
+  &:hover::before {
+    opacity: 1;
+  }
+}
