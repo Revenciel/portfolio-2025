@@ -1,0 +1,59 @@
+@use '../../app/design-tokens' as *;
+
+#contact {
+  background-image: url("/images/contact-bg.png");
+  background-size: cover;
+  h2 {
+    background-color: $c-primary;
+    background-image: none;
+    color: $c-med-black;
+  }
+  form {
+    display: flex;
+    flex-direction: column;
+    gap: $s-sm;
+    max-width: 720px;
+    label {
+      color: $c-med-black;
+      text-transform: uppercase;
+      font-weight: 700;
+      letter-spacing: 10%;
+    }
+    .field input,
+    .field textarea {
+      width: 100%;
+      padding: $s-sm;
+      color: $c-med-black;
+      font-size: 16px;
+      // font-family:inherit;
+      // font-size: 1.25rem;
+
+      background-color: $c-primary-50;
+      border: none;
+      outline: none;
+    }
+    .field textarea {
+      min-height: 160px;
+      resize: none;
+    }
+    button {
+      height: 48px;
+      max-width: 320px;
+      border: none;
+      color: $c-text;
+      background-color: $c-med-black;
+      text-transform: uppercase;
+      letter-spacing: 10%;
+      font-weight: 700;
+      font-size: 18px;
+      font-family: var(--f-meltmino);
+      cursor: pointer;
+      transition: all 0.1s ease-in;
+
+      &:hover {
+        background-color: $c-primary;
+        color: $c-med-black;
+      }
+    }
+  }
+}

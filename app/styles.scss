@@ -4,6 +4,7 @@
 @use '../components/CTA/CTA' as *;
 @use '../components/Carousel/Carousel' as *;
 @use '../components/Nav/Nav' as *;
+@use '../components/ContactForm/ContactForm' as *;
 
 html,
 body {
@@ -17,7 +18,10 @@ body {
 body {
   color: $c-text;
   background: $c-dark-black;
-  font: 400 16px var(--f-meltmino), "Courier New", monospace;
+  font:
+    400 16px var(--f-meltmino),
+    "Courier New",
+    monospace;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
@@ -30,7 +34,10 @@ body {
 
 #home h2,
 .project hgroup {
-  font: 700 48px var(--f-nicolatte), "Courier New", monospace;
+  font:
+    400 48px var(--f-nicolatte),
+    "Courier New",
+    monospace;
   line-height: 1.5;
   letter-spacing: 10%;
 
@@ -40,8 +47,6 @@ body {
   height: 144px; /* sizing square */
   padding-top: 40px; /* positioning square */
   padding-left: 24px; /* positioning square */
-  //margin-left: -24px; /* use to align to text, not to square */
-  //margin-bottom: -48px;
   white-space: nowrap;
 }
 
@@ -214,7 +219,9 @@ section {
   background-color: $c-dark-black;
   background-image: url("/images/hero-bg.png"), url("/images/hero-bg-2.png");
   background-position: left;
-  background-size: auto 400px, auto;
+  background-size:
+    auto 400px,
+    auto;
   background-repeat: no-repeat, repeat;
   height: 400px;
 
@@ -235,7 +242,10 @@ section {
       font-size: 20px;
     }
     h1 {
-      font: 400 56px var(--f-nicolatte), "Courier New", monospace;
+      font:
+        400 56px var(--f-nicolatte),
+        "Courier New",
+        monospace;
       line-height: 1.1;
       letter-spacing: 7%;
     }
@@ -250,14 +260,16 @@ section {
   }
 }
 
-@media screen and (max-width:1079){
-  .hero{
-    .wrapper{
-      .text{
-        h1{
-          font-size:48px;
+@media screen and (max-width: 1079) {
+  .hero {
+    .wrapper {
+      .text {
+        h1 {
+          font-size: 48px;
         }
       }
     }
   }
 }
+
+/////
