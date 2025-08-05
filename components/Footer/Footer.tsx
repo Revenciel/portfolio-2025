@@ -3,5 +3,5 @@ export default function Footer() {
     <footer>
       Placeholder for footer component
     </footer>
-  );
+  )
 }

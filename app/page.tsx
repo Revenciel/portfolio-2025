@@ -3,6 +3,8 @@ import getPostMetadata from '@/utils/getPostMetadata'
 import Hero from '@/components/Hero/Hero'
 import ProjectCard from '@/components/ProjectCard/ProjectCard'
 import { IllustrationCarousel } from '@/components/Carousel/Carousel'
+import ContactForm from '@/components/ContactForm/ContactForm'
+
 
 
 export default function Home() {
@@ -31,7 +33,13 @@ export default function Home() {
       <section id='illustration'>
         <div className='wrapper'>
           <h2>Illustration</h2>
-          <p>Coming soon...</p>
+          <IllustrationCarousel />
+        </div>
+      </section>
+      <section id='contact'>
+        <div className='wrapper'>
+          <h2>Contact</h2>
+          <ContactForm />
         </div>
       </section>
     </main>
