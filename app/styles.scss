@@ -1,4 +1,4 @@
-@use '../design-tokens' as *;
+@use './design-tokens' as *;
 @use '../components/Hero/Hero' as *;
 @use '../components/ProjectCard/ProjectCard' as *;
 @use '../components/CTA/CTA' as *;
@@ -246,6 +246,18 @@ section {
       gap: $s-xxs $s-md;
       list-style: "+ " inside;
       font-size: 24px;
+    }
+  }
+}
+
+@media screen and (max-width:1079){
+  .hero{
+    .wrapper{
+      .text{
+        h1{
+          font-size:48px;
+        }
+      }
     }
   }
 }
