@@ -6,7 +6,7 @@ See the live site: [Clarkybox.com](https://www.clarkybox.com/)
 
 ---
 
-### 👋 About Me
+## 👋 About Me
 
 I'm a senior UX designer with a strong foundation in product strategy, design systems, and research. I build thoughtful, user-centered experiences—and I know how to ship them. My ability to prototype and build with real code helps me bridge the gap between design and development, collaborate deeply with engineers, and bring strategic design decisions to life.
 
