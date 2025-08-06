@@ -1,36 +1,31 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# 🎨 Personal Portfolio
 
-## Getting Started
+A responsive, accessible portfolio site built with **React**, **Next.js**, **TypeScript**, and **SCSS**. Designed to showcase selected UX and product design case studies, with a strong emphasis on structure, performance, and expressive visual design.
 
-First, run the development server:
+See the live site: [Clarkybox.com](https://www.clarkybox.com/)
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+---
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+### 👋 About Me
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+I'm a senior UX designer with a strong foundation in product strategy, design systems, and research. I build thoughtful, user-centered experiences—and I know how to ship them. My ability to prototype and build with real code helps me bridge the gap between design and development, collaborate deeply with engineers, and bring strategic design decisions to life.
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+---
 
-## Learn More
+## 🚀 Tech Stack
 
-To learn more about Next.js, take a look at the following resources:
+- [Next.js](https://nextjs.org/) – App router, server-side rendering, static generation
+- [React](https://reactjs.org/) – Component-based UI
+- [TypeScript](https://www.typescriptlang.org/) – Type safety and developer ergonomics
+- [SCSS Modules](https://sass-lang.com/) – Modular, nested styles
+- [gray-matter](https://github.com/jonschlinkert/gray-matter) – Markdown + frontmatter parsing for MDX content
+- [@next/mdx](https://nextjs.org/docs/app/building-your-application/configuring/mdx) – Server-side MDX support
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+---
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## Coming soon
+- Animation & motion interactivity
+- Add light/dark mode toggle
 
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+---
+Built with ☕, 🧠, and lots of ✨.
