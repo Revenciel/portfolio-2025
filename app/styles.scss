@@ -72,12 +72,13 @@ body {
 }
 
 a {
-  color: inherit;
+  color: $c-primary;
   text-decoration: none;
 }
 
 section.band,
-article.band {
+article.band,
+footer.band {
   padding: $s-lg;
 
   .wrapper {
@@ -234,3 +235,17 @@ article.band {
 
 ///////
 
+footer.band{
+  .wrapper{
+    display:flex;
+    flex-direction:row;
+    align-items:center;
+    gap:$s-sm;
+    .text{
+      max-width:720px;
+      display:flex;
+      flex-direction:column;
+      gap:$s-xs;
+    }
+  }
+}

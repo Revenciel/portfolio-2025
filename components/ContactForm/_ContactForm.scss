@@ -1,12 +1,11 @@
-@use '../../app/design-tokens' as *;
+@use "../../app/design-tokens" as *;
 
-#contact {
+#home #contact {
   background-image: url("/images/contact-bg.png");
   background-size: cover;
   h2 {
-    background-color: $c-primary;
-    background-image: none;
     color: $c-med-black;
+    background-image: url("/images/contact-h2-bg.png");
   }
   form {
     display: flex;
@@ -25,8 +24,6 @@
       padding: $s-sm;
       color: $c-med-black;
       font-size: 16px;
-      // font-family:inherit;
-      // font-size: 1.25rem;
 
       background-color: $c-primary-50;
       border: none;
