@@ -6,7 +6,7 @@ export default function ProjectCard(props: { post: any }) { //fix type here
   return (
     <div className='project-card'>
       <div className='thumbnail'>
-        <Image src='/images/contact-bg.png' alt='placeholder' fill={true} objectFit='cover'/>
+        <Image src={post.image} alt={post.imageAltText} fill={true} objectFit='cover'/>
       </div>
 
       <div className='content'>
