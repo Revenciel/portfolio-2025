@@ -1,5 +1,4 @@
 import getPostMetadata from '@/utils/getPostMetadata'
-//import Image from "next/image";
 import Hero from '@/components/Hero/Hero'
 import ProjectCard from '@/components/ProjectCard/ProjectCard'
 import { IllustrationCarousel } from '@/components/Carousel/Carousel'
@@ -15,7 +14,7 @@ export default function Home() {
   return (
     <main id="home">
       <Hero />
-      <section id='projects'>
+      <section id='projects' className='band'>
         <div className='wrapper'>
           <h2>Projects</h2>
           <div className="project-list">
@@ -30,13 +29,13 @@ export default function Home() {
           </div>
         </div>
       </section>
-      <section id='illustration'>
+      <section id='illustration' className='band'>
         <div className='wrapper'>
           <h2>Illustration</h2>
           <IllustrationCarousel />
         </div>
       </section>
-      <section id='contact'>
+      <section id='contact' className='band'>
         <div className='wrapper'>
           <h2>Contact</h2>
           <ContactForm />

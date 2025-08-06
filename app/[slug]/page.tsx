@@ -1,7 +1,7 @@
 import React from 'react'
-//import { notFound } from 'next/navigation'
 import { getProjectMdxBySlug, getAllProjectSlugs } from '@/utils/getProjectMdx'
 import { mdxComponents } from '@/components/MDXComponents/MDXComponents'
+import SummaryCard from '@/components/SummaryCard/SummaryCard'
 
 // This generates pages statically (i.e. at build time) for every project, using getPostMetadata to get the slugs of the mdx files.
 export async function generateStaticParams() {
@@ -16,15 +16,21 @@ export async function generateMetadata({ params }: { params: { slug: string } })
   }
 }
 
+
+
 export default async function ProjectPage({ params }: { params: { slug: string } }) {
   const { content, metadata } = getProjectMdxBySlug(params.slug)
 
   const MdxContent = require(`@/projects/${params.slug}.mdx`).default
 
   return (
-    <main className="project">
+    <main className="project-page">
+      {/* add hero component here */}
       <article>
-        <MdxContent components={mdxComponents} />
+        <div className='wrapper'>
+          <SummaryCard slug={params.slug} />
+          <MdxContent components={mdxComponents} />
+        </div>
       </article>
     </main>
   )

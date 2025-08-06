@@ -1,50 +1,57 @@
 @use "../../app/design-tokens" as *;
+.project-list {
+  $shadow-depth: 16px;
 
-.project-card {
-  $image-size: 320px;
   display: flex;
-  width: 100%;
-  min-height: $image-size;
-  background-image: url(/images/noise.png);
-  filter: drop-shadow($c-primary-30 $shadow-depth $shadow-depth);
-  //align-items: stretch;
-  margin-right: $shadow-depth;
-  margin-bottom: $shadow-depth;
-
-  .thumbnail {
-    min-width: $image-size;
-    min-height: $image-size;
-    position: relative;
-  }
-
-  .content {
+  gap: $s-lg;
+  flex-direction: column;
+  padding-right: $shadow-depth;
+  .project-card {
+    $image-size: 320px;
     display: flex;
-    flex-direction: column;
+    width: 100%;
     min-height: $image-size;
-    padding: $s-sm;
-    gap: $s-sm;
+    background-image: url(/images/noise.png);
+    filter: drop-shadow($c-primary-30 $shadow-depth $shadow-depth);
+    //align-items: stretch;
+    margin-right: $shadow-depth;
+    margin-bottom: $shadow-depth;
 
-    .header {
-      display: flex;
-      gap: $s-md;
-      padding-bottom: $s-xxs;
-      border-bottom: 1px solid $c-dark-30;
-      .tags {
-        flex: 1;
-        display: flex;
-        gap: $s-xxs $s-md;
-        flex-wrap: wrap;
-        span {
-          width: fit-content;
-        }
-      }
-      .date {
-        font-weight: 700;
-      }
+    .thumbnail {
+      min-width: $image-size;
+      min-height: $image-size;
+      position: relative;
     }
 
-    .summary {
-      font-size: 20px;
+    .content {
+      display: flex;
+      flex-direction: column;
+      min-height: $image-size;
+      padding: $s-sm;
+      gap: $s-sm;
+
+      .header {
+        display: flex;
+        gap: $s-md;
+        padding-bottom: $s-xxs;
+        border-bottom: 1px solid $c-dark-30;
+        .tags {
+          flex: 1;
+          display: flex;
+          gap: $s-xxs $s-md;
+          flex-wrap: wrap;
+          span {
+            width: fit-content;
+          }
+        }
+        .date {
+          font-weight: 700;
+        }
+      }
+
+      .summary {
+        font-size: 20px;
+      }
     }
   }
 }

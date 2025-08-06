@@ -7,8 +7,8 @@ type Props = {
 }
 
 export const H1group: React.FC<Props> = ({ eyebrow, heading }) => (
-  <header>
-    <p className="eyebrow">{eyebrow}</p>
-    <h1>{heading}</h1>
-  </header>
+  <hgroup>
+    <span className="eyebrow">{eyebrow}</span>
+    <h2>{heading}</h2>
+  </hgroup>
 )

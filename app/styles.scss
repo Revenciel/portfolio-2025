@@ -32,8 +32,7 @@ body {
   margin: 0;
 }
 
-#home h2,
-.project hgroup {
+#home h2 {
   font:
     400 48px var(--f-nicolatte),
     "Courier New",
@@ -41,7 +40,7 @@ body {
   line-height: 1.5;
   letter-spacing: 10%;
 
-  background-image: url("../public/images/h1-bg.png");
+  background-image: url("/images/h1-bg.png");
   color: $c-heading;
   width: 144px; /* sizing square */
   height: 144px; /* sizing square */
@@ -65,7 +64,8 @@ a {
   text-decoration: none;
 }
 
-section {
+section.band,
+article.band {
   padding: $s-lg;
 
   .wrapper {
@@ -78,14 +78,6 @@ section {
 }
 
 // *********** HOME PAGE
-.project-list {
-  $shadow-depth: 16px;
-
-  display: flex;
-  gap: $s-lg;
-  flex-direction: column;
-  padding-right: $shadow-depth;
-}
 
 #illustration {
   background-color: $c-med-black;
@@ -229,3 +221,21 @@ section {
 }
 
 ///////
+
+.project-page {
+  article {
+    .wrapper {
+      max-width:720px;
+      hgroup {
+        h2 {
+          font:
+            400 32px var(--f-nicolatte),
+            "Courier New",
+            monospace;
+          line-height: 1.5;
+          letter-spacing: 10%;
+        }
+      }
+    }
+  }
+}
