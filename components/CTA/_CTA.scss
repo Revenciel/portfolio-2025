@@ -27,6 +27,8 @@
       align-items: center;
       width: 100%;
       justify-content: space-between;
+      text-wrap:nowrap;
+
     }
 
     .icon {
@@ -49,5 +51,11 @@
 
   &:hover::before {
     opacity: 1;
+  }
+}
+
+@media screen and (max-width:768px){
+  .cta {
+    font-size:16px;
   }
 }

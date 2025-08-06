@@ -1,10 +1,10 @@
-@use './design-tokens' as *;
-@use '../components/Hero/Hero' as *;
-@use '../components/ProjectCard/ProjectCard' as *;
-@use '../components/CTA/CTA' as *;
-@use '../components/Carousel/Carousel' as *;
-@use '../components/Nav/Nav' as *;
-@use '../components/ContactForm/ContactForm' as *;
+@use "./design-tokens" as *;
+@use "../components/Hero/Hero" as *;
+@use "../components/ProjectCard/ProjectCard" as *;
+@use "../components/CTA/CTA" as *;
+@use "../components/Carousel/Carousel" as *;
+@use "../components/Nav/Nav" as *;
+@use "../components/ContactForm/ContactForm" as *;
 
 html,
 body {
@@ -45,9 +45,19 @@ body {
   color: $c-heading;
   width: 144px; /* sizing square */
   height: 144px; /* sizing square */
-  padding-top: 40px; /* positioning square */
-  padding-left: 24px; /* positioning square */
+  padding-top: 40px; /* positioning text */
+  padding-left: 24px; /* positioning text */
   white-space: nowrap;
+}
+
+@media screen and (max-width: 768px) {
+  #home h2,
+  .project hgroup {
+    width: 96px;
+    height: 96px;
+    font-size: 40px;
+    padding-top: 24px;
+  }
 }
 
 a {
@@ -213,63 +223,93 @@ section {
   transition: all 0.5s ease-out;
 }
 
-////////
+///////
 
-.hero {
-  background-color: $c-dark-black;
-  background-image: url("/images/hero-bg.png"), url("/images/hero-bg-2.png");
-  background-position: left;
-  background-size:
-    auto 400px,
-    auto;
-  background-repeat: no-repeat, repeat;
-  height: 400px;
+.project-list {
+  $shadow-depth: 16px;
 
-  .wrapper {
-    height: 100%;
-    align-items: center;
-    flex-direction: row;
-    padding-left: 232px; //set this as absolute on larger screens, and as vw on smaller screens
-  }
+  display: flex;
+  gap: $s-lg;
+  flex-direction: column;
+  padding-right:$shadow-depth;
 
-  .text {
+  .project-card {
+    $image-size: 320px;
     display: flex;
-    flex-direction: column;
-    gap: $s-xs;
-    color: $c-med-black;
-    max-width: 720px;
-    span {
-      font-size: 20px;
-    }
-    h1 {
-      font:
-        400 56px var(--f-nicolatte),
-        "Courier New",
-        monospace;
-      line-height: 1.1;
-      letter-spacing: 7%;
+    width: 100%;
+    min-height: $image-size;
+    background-image: url(/images/noise.png);
+    filter: drop-shadow($c-primary-30 $shadow-depth $shadow-depth);
+    //align-items: stretch;
+    margin-right: $shadow-depth;
+    margin-bottom: $shadow-depth;
+
+    .thumbnail {
+      min-width: $image-size;
+      min-height: $image-size;
+      position:relative;
+  
     }
 
-    ul {
+    .content {
       display: flex;
-      flex-wrap: wrap;
-      gap: $s-xxs $s-md;
-      list-style: "+ " inside;
-      font-size: 24px;
+      flex-direction: column;
+      min-height: $image-size;
+      padding: $s-sm;
+      gap: $s-sm;
+
+      .header {
+        display: flex;
+        gap: $s-md;
+        padding-bottom: $s-xxs;
+        border-bottom: 1px solid $c-dark-30;
+        .tags {
+          flex: 1;
+          display: flex;
+          gap: $s-xxs $s-md;
+          flex-wrap: wrap;
+          span {
+            width: fit-content;
+          }
+        }
+        .date {
+          font-weight: 700;
+        }
+      }
+
+      .summary {
+        font-size: 20px;
+      }
     }
   }
 }
 
-@media screen and (max-width: 1079) {
-  .hero {
-    .wrapper {
-      .text {
-        h1 {
-          font-size: 48px;
+@media screen and (max-width: 1080px) {
+  .project-list {
+    .project-card {
+      .content {
+        .summary {
+          font-size: 18px;
         }
       }
     }
   }
 }
 
-/////
+@media screen and (max-width: 768px) {
+  .project-list {
+    .project-card {
+      flex-direction:column;
+      max-width:480;
+      min-width:320px;
+      .thumbnail{
+        aspect-ratio:1;
+      }
+      .content {
+        .summary {
+          font-size: 16px;
+        }
+      }
+    }
+  }
+}

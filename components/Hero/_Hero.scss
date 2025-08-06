@@ -1,2 +1,82 @@
 @use '../../app/design-tokens' as *;
 
+.hero {
+  background-image: url("/images/hero-bg.png"), url("/images/hero-bg-2.png");
+  background-position: left;
+  background-size:
+    auto 400px,
+    auto;
+  background-repeat: no-repeat, repeat;
+  height: 400px;
+
+  .wrapper {
+    height: 100%;
+    align-items: center;
+    flex-direction: row;
+    padding-left: 232px;
+  }
+
+  .text {
+    display: flex;
+    flex-direction: column;
+    gap: $s-xs;
+    color: $c-med-black;
+    max-width: 720px;
+    span {
+      font-size: 20px;
+    }
+    h1 {
+      font:
+        400 56px var(--f-nicolatte),
+        "Courier New",
+        monospace;
+      line-height: 1.1;
+      letter-spacing: 7%;
+    }
+
+    ul {
+      display: flex;
+      flex-wrap: wrap;
+      gap: $s-xxs $s-md;
+      list-style: "+ " inside;
+      font-size: 24px;
+    }
+  }
+}
+
+@media screen and (max-width: 1080) {
+  .hero {
+    // margin-top: -48px; // change this to match final nav height
+    .wrapper {
+      .text {
+        max-width: 640px; //short enough to prevent 4 items from being on the same line together
+        h1 {
+          font-size: 48px;
+        }
+        ul {
+          font-size: 20px;
+          gap: $s-xxxs $s-md;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 768) {
+  .hero {
+    background-image: url("/images/hero-bg-2.png");
+    background-size: auto;
+    background-repeat: repeat;
+    height: auto;
+    padding-top: 48px;
+    padding-bottom: 48px;
+    .wrapper {
+      padding: 0;
+      .text {
+        h1 {
+          font-size: 48px;
+        }
+      }
+    }
+  }
+}

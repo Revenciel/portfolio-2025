@@ -30,14 +30,14 @@ $nav-width:var(--nav-width);
   --s-xxs: 8px;
   --s-xxxs: 4px;
 
-  --nav-width:198px;
+  --nav-width:198px; //64 (square size) + (?) a constant based on the longest nav word + (16) value of nav 'right' property + (32) gap between nav and main content
 
   @media only screen and (max-width: 1079px) {
     --s-lg: 24px;
     --s-md: 24px;
     --s-sm: 16px;
     
-    --nav-width:0px;//64 (square size) + a constant based on the longest nav word + (16) value of nav 'right' property + (32) gap between nav and main content
+    --nav-width:0px;
   }
 }
 

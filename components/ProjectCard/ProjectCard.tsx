@@ -5,8 +5,10 @@ export default function ProjectCard(props: { post: any }) { //fix type here
   const { post } = props
   return (
     <div className='project-card'>
-      <Image src='/images/semi-transparent.png' alt='placeholder' width={400} height={400} className='thumbnail'/>
-      {/* <Image src={post.image} alt='placeholder' width={400} height={400} /> */}
+      <div className='thumbnail'>
+        <Image src='/images/contact-bg.png' alt='placeholder' fill={true} objectFit='cover'/>
+      </div>
+
       <div className='content'>
         <div className='header'>
           <div className='tags'>
@@ -14,7 +16,7 @@ export default function ProjectCard(props: { post: any }) { //fix type here
             <span>{post.keyword2}</span>
             <span>{post.keyword3}</span>
           </div>
-          <span>{post.date}</span>
+          <span className='date'>{post.date}</span>
         </div>
         <p className='summary'>{post.summary}</p>
         <CTA label={post.ctaLabel} href={`/${post.slug}`} />
