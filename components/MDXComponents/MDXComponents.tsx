@@ -1,8 +1,8 @@
 import type { MDXComponents } from 'mdx/types'
-import { H1group } from '@/components/MDXComponents/H1group'
+import { H2group } from '@/components/MDXComponents/H2group'
 
 export const mdxComponents: MDXComponents = {
-  H1group,
+  H2group,
 }
 
 

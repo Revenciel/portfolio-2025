@@ -15,6 +15,16 @@ body {
   letter-spacing: +0.5%;
 }
 
+.visually-hidden:not(:focus):not(:active) {
+  clip: rect(0 0 0 0);
+  clip-path: inset(50%);
+  height: 1px;
+  overflow: hidden;
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
+}
+
 body {
   color: $c-text;
   background: $c-dark-black;
@@ -225,7 +235,9 @@ article.band {
 .project-page {
   article {
     .wrapper {
-      max-width:720px;
+      max-width: 720px;
+      gap:$s-sm;
+
       hgroup {
         h2 {
           font:
@@ -237,5 +249,29 @@ article.band {
         }
       }
     }
+  }
+}
+
+.summary-card {
+  width: calc(100% - 16px);
+  background-image: url(/images/noise.png);
+  filter: drop-shadow($c-primary-30 16px 16px);
+  padding:$s-sm;
+  display:flex;
+  flex-direction:column;
+  gap:$s-xxs;
+  margin-bottom:calc($s-sm + 16px);
+  // margin-right:100px;
+  h3{
+    color:$c-primary;
+  }
+  ul{
+    list-style-position:inside;
+  }  
+}
+
+@media screen and (max-width:768px){
+  .summary-card{
+    font-size:14px;
   }
 }

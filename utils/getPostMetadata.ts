@@ -4,6 +4,7 @@ import matter from 'gray-matter'
 export default function getPostMetadata(basePath: string, slug?: string) {
     const folder = basePath + '/'
 
+    //this means if a slug is passed, the function will return an array containing the metadata of just the post for that slug
     if (slug) {
         const filePath = `${folder}${slug}.mdx`
         if (!fs.existsSync(filePath)) {

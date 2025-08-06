@@ -6,7 +6,7 @@ type Props = {
   heading: string
 }
 
-export const H1group: React.FC<Props> = ({ eyebrow, heading }) => (
+export const H2group: React.FC<Props> = ({ eyebrow, heading }) => (
   <hgroup>
     <span className="eyebrow">{eyebrow}</span>
     <h2>{heading}</h2>
