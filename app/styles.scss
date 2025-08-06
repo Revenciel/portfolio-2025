@@ -78,16 +78,21 @@ section {
 }
 
 // *********** HOME PAGE
+.project-list {
+  $shadow-depth: 16px;
+
+  display: flex;
+  gap: $s-lg;
+  flex-direction: column;
+  padding-right: $shadow-depth;
+}
+
 #illustration {
   background-color: $c-med-black;
 }
 
-///////
-/// ////
-/// ////
-/// ////
-/// ///
-///
+////////////////////////////////////////
+
 .carouselWrapper {
   width: 100%;
   max-width: 80rem;
@@ -224,92 +229,3 @@ section {
 }
 
 ///////
-
-.project-list {
-  $shadow-depth: 16px;
-
-  display: flex;
-  gap: $s-lg;
-  flex-direction: column;
-  padding-right:$shadow-depth;
-
-  .project-card {
-    $image-size: 320px;
-    display: flex;
-    width: 100%;
-    min-height: $image-size;
-    background-image: url(/images/noise.png);
-    filter: drop-shadow($c-primary-30 $shadow-depth $shadow-depth);
-    //align-items: stretch;
-    margin-right: $shadow-depth;
-    margin-bottom: $shadow-depth;
-
-    .thumbnail {
-      min-width: $image-size;
-      min-height: $image-size;
-      position:relative;
-  
-    }
-
-    .content {
-      display: flex;
-      flex-direction: column;
-      min-height: $image-size;
-      padding: $s-sm;
-      gap: $s-sm;
-
-      .header {
-        display: flex;
-        gap: $s-md;
-        padding-bottom: $s-xxs;
-        border-bottom: 1px solid $c-dark-30;
-        .tags {
-          flex: 1;
-          display: flex;
-          gap: $s-xxs $s-md;
-          flex-wrap: wrap;
-          span {
-            width: fit-content;
-          }
-        }
-        .date {
-          font-weight: 700;
-        }
-      }
-
-      .summary {
-        font-size: 20px;
-      }
-    }
-  }
-}
-
-@media screen and (max-width: 1080px) {
-  .project-list {
-    .project-card {
-      .content {
-        .summary {
-          font-size: 18px;
-        }
-      }
-    }
-  }
-}
-
-@media screen and (max-width: 768px) {
-  .project-list {
-    .project-card {
-      flex-direction:column;
-      max-width:480;
-      min-width:320px;
-      .thumbnail{
-        aspect-ratio:1;
-      }
-      .content {
-        .summary {
-          font-size: 16px;
-        }
-      }
-    }
-  }
-}
