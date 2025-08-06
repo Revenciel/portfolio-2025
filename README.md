@@ -4,13 +4,9 @@ A responsive, accessible portfolio site built with **React**, **Next.js**, **Typ
 
 See the live site: [Clarkybox.com](https://www.clarkybox.com/)
 
----
-
 ## 👋 About Me
 
 I'm a senior UX designer with a strong foundation in product strategy, design systems, and research. I build thoughtful, user-centered experiences—and I know how to ship them. My ability to prototype and build with real code helps me bridge the gap between design and development, collaborate deeply with engineers, and bring strategic design decisions to life.
-
----
 
 ## 🚀 Tech Stack
 
@@ -20,8 +16,6 @@ I'm a senior UX designer with a strong foundation in product strategy, design sy
 - [SCSS Modules](https://sass-lang.com/) – Modular, nested styles
 - [gray-matter](https://github.com/jonschlinkert/gray-matter) – Markdown + frontmatter parsing for MDX content
 - [@next/mdx](https://nextjs.org/docs/app/building-your-application/configuring/mdx) – Server-side MDX support
-
----
 
 ## Coming soon
 - Animation & motion interactivity
