@@ -1,8 +1,6 @@
-import Image from "next/image";
-
 export default function Hero() {
   return (
-    <section className='hero'>
+    <section className='band hero'>
       <div className='wrapper'>
         <div className='text'>
           <span>Clarkybox Design</span>

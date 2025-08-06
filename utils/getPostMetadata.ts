@@ -16,6 +16,7 @@ export default function getPostMetadata(basePath: string, slug?: string) {
 
         return [{ //this is an array so that the function always returns an array type
             title: matterResult.data.title,
+            type: matterResult.data.type,
             image: matterResult.data.image,
             imageAltText: matterResult.data.imageAltText,
             date: matterResult.data.date,
@@ -23,7 +24,7 @@ export default function getPostMetadata(basePath: string, slug?: string) {
             keyword2: matterResult.data.keyword2,
             keyword3: matterResult.data.keyword3,
             summary: matterResult.data.summary,
-            ctaLabel: matterResult.data.ctaLabel,
+            ctaLabel: matterResult.data.ctaLabel, //later, add function in cta component to do label automatically based on project type
             slug
         }]
     }
@@ -37,6 +38,7 @@ export default function getPostMetadata(basePath: string, slug?: string) {
         const matterResult = matter(fileContents)
         return {
             title: matterResult.data.title,
+            type: matterResult.data.type,
             image: matterResult.data.image,
             imageAltText: matterResult.data.imageAltText,
             date: matterResult.data.date,

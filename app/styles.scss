@@ -1,4 +1,5 @@
 @use "./design-tokens" as *;
+@use "./[slug]/project-page" as *;
 @use "../components/Hero/Hero" as *;
 @use "../components/ProjectCard/ProjectCard" as *;
 @use "../components/CTA/CTA" as *;
@@ -231,47 +232,38 @@ article.band {
 }
 
 ///////
-
-.project-page {
-  article {
-    .wrapper {
-      max-width: 720px;
-      gap:$s-sm;
-
-      hgroup {
-        h2 {
-          font:
-            400 32px var(--f-nicolatte),
-            "Courier New",
-            monospace;
-          line-height: 1.5;
-          letter-spacing: 10%;
-        }
-      }
+.project-page .hero {
+  background-image: url("/images/contact-bg.png");
+  background-size: cover;
+  color: $c-med-black;
+  .eyebrow {
+    font-size: 20px;
+  }
+  .text {
+    max-width: 720px;
+    h1 {
+      font-size: 48px;
+      font-weight: 400;
+      font-family: var(--f-nicolatte);
+      line-height:1.1;
+      margin-bottom:$s-lg;
+    }
+    .back {
+      border-bottom: 1px solid $c-med-black;
+      display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 4px;
+        width: fit-content;
+        text-wrap: nowrap;
+        padding-left:2px;
+        padding-right:2px;
     }
   }
 }
 
-.summary-card {
-  width: calc(100% - 16px);
-  background-image: url(/images/noise.png);
-  filter: drop-shadow($c-primary-30 16px 16px);
-  padding:$s-sm;
-  display:flex;
-  flex-direction:column;
-  gap:$s-xxs;
-  margin-bottom:calc($s-sm + 16px);
-  // margin-right:100px;
-  h3{
-    color:$c-primary;
-  }
-  ul{
-    list-style-position:inside;
-  }  
-}
-
 @media screen and (max-width:768px){
-  .summary-card{
-    font-size:14px;
+  .project-page .hero .text h1{
+    font-size:32px;
   }
 }

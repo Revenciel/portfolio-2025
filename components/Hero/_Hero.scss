@@ -1,6 +1,6 @@
-@use '../../app/design-tokens' as *;
+@use "../../app/design-tokens" as *;
 
-.hero {
+#home .hero {
   background-image: url("/images/hero-bg.png"), url("/images/hero-bg-2.png");
   background-position: left;
   background-size:
@@ -45,7 +45,7 @@
 }
 
 @media screen and (max-width: 1080) {
-  .hero {
+  #home .hero {
     // margin-top: -48px; // change this to match final nav height
     .wrapper {
       .text {
@@ -63,20 +63,21 @@
 }
 
 @media screen and (max-width: 768) {
-  .hero {
-    background-image: url("/images/hero-bg-2.png");
-    background-size: auto;
-    background-repeat: repeat;
-    height: auto;
-    padding-top: 48px;
-    padding-bottom: 48px;
-    .wrapper {
-      padding: 0;
-      .text {
-        h1 {
-          font-size: 48px;
+
+    #home .hero {
+      background-image: url("/images/hero-bg-2.png");
+      background-size: auto;
+      background-repeat: repeat;
+      height: auto;
+      padding-top: 48px;
+      padding-bottom: 48px;
+      .wrapper {
+        padding: 0;
+        .text {
+          h1 {
+            font-size: 48px;
+          }
         }
       }
     }
-  }
 }

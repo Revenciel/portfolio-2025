@@ -1,0 +1,45 @@
+@use "../design-tokens" as *;
+
+.project-page {
+  article.band {
+    .wrapper {
+      max-width: 720px;
+      gap:$s-sm;
+
+      hgroup {
+        h2 {
+          font:
+            400 32px var(--f-nicolatte),
+            "Courier New",
+            monospace;
+          line-height: 1.5;
+          letter-spacing: 10%;
+        }
+      }
+    }
+  }
+}
+
+.summary-card {
+  width: calc(100% - 16px);
+  background-image: url(/images/noise.png);
+  filter: drop-shadow($c-primary-30 16px 16px);
+  padding:$s-sm;
+  display:flex;
+  flex-direction:column;
+  gap:$s-xxs;
+  margin-bottom:calc($s-sm + 16px);
+  // margin-right:100px;
+  h3{
+    color:$c-primary;
+  }
+  ul{
+    list-style-position:inside;
+  }  
+}
+
+@media screen and (max-width:768px){
+  .summary-card{
+    font-size:14px;
+  }
+}
