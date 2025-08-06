@@ -6,6 +6,7 @@
 @use "../components/Carousel/Carousel" as *;
 @use "../components/Nav/Nav" as *;
 @use "../components/ContactForm/ContactForm" as *;
+@use "../components/ProjectHero/ProjectHero" as *;
 
 html,
 body {
@@ -232,38 +233,4 @@ article.band {
 }
 
 ///////
-.project-page .hero {
-  background-image: url("/images/contact-bg.png");
-  background-size: cover;
-  color: $c-med-black;
-  .eyebrow {
-    font-size: 20px;
-  }
-  .text {
-    max-width: 720px;
-    h1 {
-      font-size: 48px;
-      font-weight: 400;
-      font-family: var(--f-nicolatte);
-      line-height:1.1;
-      margin-bottom:$s-lg;
-    }
-    .back {
-      border-bottom: 1px solid $c-med-black;
-      display: flex;
-        align-items: center;
-        justify-content: space-between;
-        gap: 4px;
-        width: fit-content;
-        text-wrap: nowrap;
-        padding-left:2px;
-        padding-right:2px;
-    }
-  }
-}
 
-@media screen and (max-width:768px){
-  .project-page .hero .text h1{
-    font-size:32px;
-  }
-}
