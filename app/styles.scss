@@ -169,7 +169,7 @@ footer.band {
 
 .carouselViewport {
   overflow: hidden;
-  border-radius: 1rem;
+  // border-radius: 1rem;
   height: 320px;
 }
 
@@ -234,18 +234,3 @@ footer.band {
 }
 
 ///////
-
-footer.band{
-  .wrapper{
-    display:flex;
-    flex-direction:row;
-    align-items:center;
-    gap:$s-sm;
-    .text{
-      max-width:720px;
-      display:flex;
-      flex-direction:column;
-      gap:$s-xs;
-    }
-  }
-}
