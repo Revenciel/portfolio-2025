@@ -1,12 +1,13 @@
-@use "./design-tokens" as *;
-@use "./[slug]/project-page" as *;
-@use "../components/Hero/Hero" as *;
-@use "../components/ProjectCard/ProjectCard" as *;
-@use "../components/CTA/CTA" as *;
-@use "../components/Carousel/Carousel" as *;
-@use "../components/Nav/Nav" as *;
-@use "../components/ContactForm/ContactForm" as *;
-@use "../components/ProjectHero/ProjectHero" as *;
+@use './design-tokens' as *;
+@use './[slug]/project-page' as *;
+@use '../components/Hero/Hero' as *;
+@use '../components/Footer/Footer' as *;
+@use '../components/ProjectCard/ProjectCard' as *;
+@use '../components/CTA/CTA' as *;
+@use '../components/Carousel/Carousel' as *;
+@use '../components/Nav/Nav' as *;
+@use '../components/ContactForm/ContactForm' as *;
+@use '../components/ProjectHero/ProjectHero' as *;
 
 html,
 body {
