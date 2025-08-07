@@ -12,7 +12,7 @@ export function getAllProjectSlugs() {
 
 export function getProjectMdxBySlug(slug: string) {
     
-    const filepath = path.join(process.cwd(), 'projects', `${slug}.mdx`)
+    const filepath = path.join(process.cwd(), 'projects/temp', `${slug}.mdx`)
     
     if (!fs.existsSync(filepath)){
         notFound();
