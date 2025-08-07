@@ -6,7 +6,7 @@ nav {
   right: $s-sm;
   padding-right: 100px;
   text-align: right;
-  // z-index: 1;
+  z-index: 1000;
 
   ul {
     li {
@@ -17,6 +17,9 @@ nav {
         height: 64px;
         padding: 0;
         background-color: transparent;
+        &:hover {
+          background-color: transparent;
+        }
       }
 
       a {
@@ -29,8 +32,9 @@ nav {
         padding-left: $s-xs;
         margin-bottom: $s-xs;
 
-        background-color:$c-primary;
-        color:$c-dark-black;
+        backdrop-filter: blur(4px);
+        background-color: $c-primary;
+        color: $c-dark-black;
         font-size: 18px;
         letter-spacing: 10%;
         text-transform: uppercase;
@@ -41,10 +45,10 @@ nav {
         }
       }
 
-      a.inverted{
-        color:$c-heading;
-        img{
-          content:url('/images/logo-80-light.png');
+      a.inverted {
+        color: $c-heading;
+        img {
+          content: url("/images/logo-80-light.png");
         }
       }
     }
@@ -66,11 +70,24 @@ nav {
     background-color: $c-med-black;
 
     ul {
+      position: relative;
+      left: calc(64px + 16px);
       width: 100%;
-      margin: 0 auto;
       display: flex;
-      justify-content: center;
-      gap: $s-md;
+      justify-content: left;
+      gap: 0 $s-md;
+      min-height: 64px;
+      max-width: calc(100% - 64px);
+
+      li {
+        align-items: center;
+        display: flex;
+      }
+
+      li:first-child {
+        position: absolute;
+        transform: translateX(calc(-64px - 16px));
+      }
 
       li a {
         color: $c-text;
@@ -79,6 +96,10 @@ nav {
         margin: 0;
         padding: 0;
         background-color: transparent;
+
+        img {
+          content: url("/images/logo-80-light.png");
+        }
       }
     }
   }
@@ -88,12 +109,12 @@ nav {
   nav {
     ul {
       width: 100%;
-      display: flex;
+      // display: flex;
       flex-wrap: wrap;
-      gap: $s-xxs $s-md;
+      // gap: $s-xxs $s-md;
     }
   }
-  nav li a {
+  nav ul li a {
     font-size: 14px;
   }
 }

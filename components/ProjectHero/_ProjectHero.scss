@@ -1,4 +1,4 @@
-@use '../../app/design-tokens' as *;
+@use "../../app/design-tokens" as *;
 
 .project-page .hero {
   background-image: url("/images/contact-bg.png");
@@ -9,29 +9,51 @@
   }
   .text {
     max-width: 720px;
+    font-size: 20px;
     h1 {
       font-size: 48px;
       font-weight: 400;
       font-family: var(--f-nicolatte);
-      line-height:1.1;
-      margin-bottom:$s-lg;
+      line-height: 1.1;
+      margin-bottom: $s-lg;
     }
     .back {
       border-bottom: 1px solid $c-med-black;
       display: flex;
-        align-items: center;
-        justify-content: space-between;
-        gap: 4px;
-        width: fit-content;
-        text-wrap: nowrap;
-        padding-left:2px;
-        padding-right:2px;
+      align-items: center;
+      justify-content: space-between;
+      gap: 4px;
+      width: fit-content;
+      text-wrap: nowrap;
+      padding-left: 2px;
+      padding-right: 2px;
+      color: $c-med-black;
+
+      &:hover{
+        background-color:$c-primary-50;
+      }
     }
   }
 }
 
-@media screen and (max-width:768px){
-  .project-page .hero .text h1{
-    font-size:32px;
+@media screen and (max-width: 768px) {
+  .project-page .hero .text h1 {
+    font-size: 32px;
+  }
+}
+
+.project-page {
+  font-size: 20px;
+  .summary-card {
+    font-size: 18px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .project-page {
+    font-size:18px;
+    .summary-card {
+      font-size: 16px;
+    }
   }
 }
