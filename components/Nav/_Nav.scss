@@ -1,4 +1,4 @@
-@use '../../app/design-tokens' as *;
+@use "../../app/design-tokens" as *;
 
 nav {
   position: fixed;
@@ -6,52 +6,73 @@ nav {
   right: $s-sm;
   padding-right: 100px;
   text-align: right;
-  z-index: 1;
+  // z-index: 1;
 
-  ul li {
-    list-style-type: none;
-  }
-  a {
-    display: block; /* enables the sqare background */
+  ul {
+    li {
+      list-style-type: none;
 
-    width: 64px; /* sizing square */
-    height: 64px; /* sizing square */
-    padding-top: 20px; /* positioning square */
-    padding-left: $s-xs; /* positioning square */
-    margin-bottom: $s-xs;
+      &:first-child a {
+        width: 64px;
+        height: 64px;
+        padding: 0;
+        background-color: transparent;
+      }
 
-    background-color: $c-primary;
-    color: $c-med-black;
-    font-size: 18px;
-    letter-spacing: 10%;
-    text-transform: uppercase;
-    font-weight: bold;
+      a {
+        display: block;
+        position: relative;
 
-    &:hover {
-      background-color: $c-primary-30;
+        width: 64px;
+        height: 64px;
+        padding-top: 20px;
+        padding-left: $s-xs;
+        margin-bottom: $s-xs;
+
+        background-color:$c-primary;
+        // color: $c-heading;
+        color:$c-dark-black;
+        font-size: 18px;
+        letter-spacing: 10%;
+        text-transform: uppercase;
+        font-weight: bold;
+
+        &:hover {
+          background-color: $c-primary-30;
+        }
+      }
+
+      a.inverted{
+        // color:$c-med-black;
+        color:$c-heading;
+      }
     }
   }
 }
 
+// nav.inverted ul li a {
+//   color: $c-med-black;
+// }
+
 @media screen and (max-width: 1080px) {
   nav {
-    z-index:1000;
-    position:sticky;
+    //z-index: 1000;
+    position: sticky;
     top: 0;
     right: auto;
     width: 100%;
     padding: $s-xxs $s-lg;
     background-color: $c-med-black;
-    
+
     ul {
-      width:100%;
-      margin:0 auto;
-      display:flex;
-      justify-content:center;
+      width: 100%;
+      margin: 0 auto;
+      display: flex;
+      justify-content: center;
       gap: $s-md;
-      //align-items:center;
+
       li a {
-        color:$c-text;
+        color: $c-text;
         width: auto;
         height: auto;
         margin: 0;
@@ -62,16 +83,16 @@ nav {
   }
 }
 
-@media screen and (max-width:768px){
-  nav{
-    ul{
-      width:100%;
-      display:flex;
+@media screen and (max-width: 768px) {
+  nav {
+    ul {
+      width: 100%;
+      display: flex;
       flex-wrap: wrap;
-      gap:$s-xxs $s-md;
+      gap: $s-xxs $s-md;
     }
   }
-  nav li a{
-    font-size:14px;
+  nav li a {
+    font-size: 14px;
   }
 }
