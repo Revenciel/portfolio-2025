@@ -102,6 +102,8 @@ export const IllustrationCarousel = () => {
                                     <Image
                                         src={image.src}
                                         alt={image.alt}
+                                        width='320'
+                                        height='320'
                                         className={`image ${isVisible ? 'visible' : 'dimmed'}`}
                                     />
                                     <div className='hoverOverlay' />
