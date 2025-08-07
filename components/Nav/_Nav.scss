@@ -30,7 +30,6 @@ nav {
         margin-bottom: $s-xs;
 
         background-color:$c-primary;
-        // color: $c-heading;
         color:$c-dark-black;
         font-size: 18px;
         letter-spacing: 10%;
@@ -43,8 +42,10 @@ nav {
       }
 
       a.inverted{
-        // color:$c-med-black;
         color:$c-heading;
+        img{
+          content:url('/images/logo-80-light.png');
+        }
       }
     }
   }

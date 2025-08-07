@@ -84,7 +84,7 @@ export default function Nav() {
     <nav>
       <ul>
         <li>
-          <Link href="/"><Image src='/images/logo-80-light.png' alt='Home' fill={true} objectFit='contain' /></Link>
+          <Link href="/"><Image src='/images/logo-80-dark.png' alt='Home' fill={true} objectFit='contain' /></Link>
         </li>
         <li>
           <Link href="/#projects">Projects</Link>

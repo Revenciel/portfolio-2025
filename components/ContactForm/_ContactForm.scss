@@ -1,7 +1,7 @@
 @use "../../app/design-tokens" as *;
 
 #home #contact {
-  background-image: url("/images/contact-bg.png");
+  background-image: url("/images/contact-bg-lg.png");
   background-size: cover;
   h2 {
     color: $c-med-black;
