@@ -1,0 +1,21 @@
+@use "../../app/design-tokens" as *;
+
+footer.band {
+  padding: $s-lg;
+  .wrapper {
+    margin-right: $nav-width;
+    max-width: 1200px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: $s-sm;
+    border-top: 1px solid $c-text-30;
+    padding-top:$s-md;
+    .text {
+      max-width: 720px;
+      display: flex;
+      flex-direction: column;
+      gap: $s-xs;
+    }
+  }
+}
