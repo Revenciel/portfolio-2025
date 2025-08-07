@@ -5,7 +5,7 @@ import ProjectHero from '@/components/ProjectHero/ProjectHero'
 
 // This generates pages statically (i.e. at build time) for every project, using getPostMetadata to get the slugs of the mdx files.
 export async function generateStaticParams() {
-  const slugs = getAllProjectSlugs()
+  const slugs = await getAllProjectSlugs()
   return slugs.map((slug) => ({ slug }))
 }
 
