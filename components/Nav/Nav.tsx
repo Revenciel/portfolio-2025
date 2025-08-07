@@ -78,7 +78,7 @@ export default function Nav() {
         </li>
         <li><Link href="/#projects">Projects</Link></li>
         <li><Link href="/#illustration">Illustration</Link></li>
-        <li><Link href="/#about">About</Link></li>
+        <li><Link href="https://github.com/Revenciel/portfolio-2025" target='_blank'>GitHub</Link></li>
         <li><Link href="/#contact">Contact</Link></li>
       </ul>
     </nav>
