@@ -3,6 +3,7 @@
 #home #contact {
   background-image: url("/images/contact-bg-lg.png");
   background-size: cover;
+  color:$c-med-black;
   h2 {
     color: $c-med-black;
     background-image: url("/images/contact-h2-bg.png");
@@ -13,7 +14,6 @@
     gap: $s-sm;
     max-width: 720px;
     label {
-      color: $c-med-black;
       text-transform: uppercase;
       font-weight: 700;
       letter-spacing: 10%;
@@ -22,9 +22,8 @@
     .field textarea {
       width: 100%;
       padding: $s-sm;
-      color: $c-med-black;
-      font-size: 16px;
 
+      font-size: 16px;
       background-color: $c-primary-50;
       border: none;
       outline: none;
