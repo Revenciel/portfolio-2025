@@ -1,4 +1,4 @@
-import Image from "next/image";
+// import Image from "next/image";
 import Link from "next/link";
 import getPostMetadata from "@/utils/getPostMetadata";
 
@@ -15,10 +15,10 @@ export default function ProjectHero({ slug }: { slug: string }) {
                         <h1>{metadata[0].title}</h1>
                     </hgroup>
                     <Link className='back' href='/#projects'>
-     
-                         Back to Projects
-                        <img src="/images/icon-back.svg" className="icon" aria-hidden="true" />
-             
+
+                        Back to Projects
+                        <img src="/images/icon-back.svg" className="icon" aria-hidden="true" alt='' />
+
                     </Link>
                 </div>
                 {/* <Image src={metadata[0].image} alt={metadata[0].imageAltText}></Image> */}

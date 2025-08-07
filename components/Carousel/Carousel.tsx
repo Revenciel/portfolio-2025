@@ -27,11 +27,11 @@ export const IllustrationCarousel = () => {
     const gap = 24;
     const totalItemWidth = itemWidth + gap;
 
-    const maxIndex = Math.max(0, images.length - Math.floor(800 / totalItemWidth));
+    // const maxIndex = Math.max(0, images.length - Math.floor(800 / totalItemWidth));
     const canGoBack = currentIndex > 0;
     const canGoForward = currentIndex < images.length - visibleImages.size;
     
-    const scrollPosition = maxIndex > 0 ? (currentIndex / maxIndex) * 100 : 0;
+    // const scrollPosition = maxIndex > 0 ? (currentIndex / maxIndex) * 100 : 0;
 
     useEffect(() => {
         const observeVisibility = () => {
@@ -99,7 +99,7 @@ export const IllustrationCarousel = () => {
                                     className='imageSlide'
                                     style={{ width: `${itemWidth}px`, height: '320px' }}
                                 >
-                                    <img
+                                    <Image
                                         src={image.src}
                                         alt={image.alt}
                                         className={`image ${isVisible ? 'visible' : 'dimmed'}`}

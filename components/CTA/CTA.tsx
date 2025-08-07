@@ -6,7 +6,7 @@ export default function CTA(props: { label: string, href: string }) {
             <Link href={props.href}>
                 <span className="label">
                     {props.label}
-                    <img src="/images/arrow.svg" className="icon" aria-hidden="true" />
+                    <img src="/images/arrow.svg" className="icon" aria-hidden="true" alt=''/>
                 </span>
             </Link>
 

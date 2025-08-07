@@ -19,7 +19,7 @@ export async function generateMetadata({ params }: { params: { slug: string } })
 
 
 export default async function ProjectPage({ params }: { params: { slug: string } }) {
-  const { content, metadata } = getProjectMdxBySlug(params.slug)
+  // const { content, metadata } = getProjectMdxBySlug(params.slug)
 
   const MdxContent = require(`@/projects/${params.slug}.mdx`).default
 

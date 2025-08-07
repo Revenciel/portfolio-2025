@@ -1,7 +1,6 @@
 'use client'
 
 import { useState } from 'react';
-import styles from './ContactForm.module.scss';
 
 type FormData = {
   name: string;
