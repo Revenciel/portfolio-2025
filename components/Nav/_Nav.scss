@@ -68,16 +68,17 @@ nav {
     width: 100%;
     padding: $s-xxs $s-lg;
     background-color: $c-med-black;
+    justify-content:right;
+    display:flex;
 
     ul {
-      position: relative;
-      left: calc(64px + 16px);
+      // left: calc(64px + 16px);
       width: 100%;
       display: flex;
-      justify-content: left;
+      justify-content: right;
       gap: 0 $s-md;
       min-height: 64px;
-      max-width: calc(100% - 64px);
+      max-width: calc(100% - 112px);
 
       li {
         align-items: center;
@@ -86,7 +87,8 @@ nav {
 
       li:first-child {
         position: absolute;
-        transform: translateX(calc(-64px - 16px));
+        // transform: translateX(calc(-64px - 16px));
+        left:24px;
       }
 
       li a {
@@ -111,7 +113,7 @@ nav {
       width: 100%;
       // display: flex;
       flex-wrap: wrap;
-      // gap: $s-xxs $s-md;
+      gap: 0 $s-sm;
     }
   }
   nav ul li a {
