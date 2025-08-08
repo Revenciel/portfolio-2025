@@ -22,7 +22,7 @@
 
 .summary-card {
   width: calc(100% - 16px);
-  background-image: url(/images/noise.png);
+  background-image: url('/images/noise.png');
   filter: drop-shadow($c-primary-30 16px 16px);
   padding:$s-sm;
   display:flex;

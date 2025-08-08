@@ -1,7 +1,7 @@
 @use "../../app/design-tokens" as *;
 
 .project-page .hero {
-  background-image: url("/images/contact-bg.png");
+  background-image: url("/images/contact-bg-lg.webp");
   background-size: cover;
   color: $c-med-black;
   .eyebrow {
