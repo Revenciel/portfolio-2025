@@ -39,8 +39,8 @@ const nicolatte = localFont({
 })
 
 export const metadata: Metadata = {
-  title: "Clarkybox Design",
-  description: "UX & Product Design. Based out of Asheville, NC.",
+  title: "Senior UX & Product Designer - Design Systems, Front-End Dev & UX Research | Clarkybox Design",
+  description: "Experienced Senior UX/Product Designer specializing in design systems, UX research, and front-end development (React, Next.js). Former Red Hat UX research lead and start-up design lead, with proven success delivering AI-driven, SaaS, B2B, and marketing solutions.",
 };
 
 export default function RootLayout({
