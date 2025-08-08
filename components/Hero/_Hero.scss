@@ -44,7 +44,7 @@
   }
 }
 
-@media screen and (max-width: 1080) {
+@media screen and (max-width: 1080px) {
   #home .hero {
     // margin-top: -48px; // change this to match final nav height
     .wrapper {
@@ -62,7 +62,7 @@
   }
 }
 
-@media screen and (max-width: 768) {
+@media screen and (max-width: 768px) {
 
     #home .hero {
       background-image: url("/images/hero-bg-2.png");
