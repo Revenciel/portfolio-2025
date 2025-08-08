@@ -22,8 +22,16 @@ nav {
         }
       }
 
+      &:first-child a.inverted {
+        img {
+          content: url("/images/logo-80-light.png");
+        }
+      }
+
       a {
-        display: block;
+        display: flex;
+        // align-items:baseline;
+        gap: $s-xxxs;
         position: relative;
 
         width: 64px;
@@ -43,12 +51,17 @@ nav {
         &:hover {
           background-color: $c-primary-30;
         }
-      }
-
-      a.inverted {
-        color: $c-heading;
+        &.inverted {
+          color: $c-heading;
+          img {
+            content: url("/images/icon-external-link-light.svg");
+          }
+        }
         img {
-          content: url("/images/logo-80-light.png");
+          height: 18px;
+          width: 18px;
+          position: relative;
+          top: 2px;
         }
       }
     }
@@ -68,8 +81,8 @@ nav {
     width: 100%;
     padding: $s-xxs $s-lg;
     background-color: $c-med-black;
-    justify-content:right;
-    display:flex;
+    justify-content: right;
+    display: flex;
 
     ul {
       // left: calc(64px + 16px);
@@ -83,23 +96,24 @@ nav {
       li {
         align-items: center;
         display: flex;
+        a {
+          color: $c-text;
+          width: auto;
+          height: auto;
+          margin: 0;
+          padding: 0;
+          background-color: transparent;
+          img {
+            content: url("/images/icon-external-link-light.svg");
+          }
+        }
       }
 
       li:first-child {
         position: absolute;
         // transform: translateX(calc(-64px - 16px));
-        left:24px;
-      }
-
-      li a {
-        color: $c-text;
-        width: auto;
-        height: auto;
-        margin: 0;
-        padding: 0;
-        background-color: transparent;
-
-        img {
+        left: 24px;
+        a img {
           content: url("/images/logo-80-light.png");
         }
       }
@@ -118,5 +132,10 @@ nav {
   }
   nav ul li a {
     font-size: 14px;
+    img{
+      width:14px;
+      height:14px;
+      top:1px;
+    }
   }
 }
