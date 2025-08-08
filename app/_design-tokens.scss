@@ -32,7 +32,7 @@ $nav-width:var(--nav-width);
 
   --nav-width:198px; //64 (square size) + (?) a constant based on the longest nav word + (16) value of nav 'right' property + (32) gap between nav and main content
 
-  @media only screen and (max-width: 1079px) {
+  @media only screen and (max-width: 1080px) {
     --s-lg: 24px;
     --s-md: 24px;
     --s-sm: 16px;
