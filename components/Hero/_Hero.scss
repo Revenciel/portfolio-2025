@@ -1,7 +1,7 @@
 @use '../../app/design-tokens' as *;
 
 #home .hero {
-  background-image: url("/images/hero-bg.png"), url("/images/hero-bg-2.png");
+  background-image: url("/images/hero-bg.webp"), url("/images/hero-bg-2.png");
   background-position: left;
   background-size:
     auto 400px,
