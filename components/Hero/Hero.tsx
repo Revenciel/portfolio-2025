@@ -9,7 +9,7 @@ export default function Hero() {
             <li>Design Systems</li>
             <li>UX Research</li>
             <li>Branding</li>
-            <li>NextJS & CSS</li>
+            <li>Next.JS & CSS</li>
             <li>Illustration</li>
             <li>Typography</li>
           </ul>
