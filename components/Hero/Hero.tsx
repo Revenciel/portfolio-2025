@@ -11,7 +11,7 @@ export default function Hero() {
             <li>Branding</li>
             <li>NextJS & CSS</li>
             <li>Illustration</li>
-            <li>Typograpghy</li>
+            <li>Typography</li>
           </ul>
         </div>
       </div>
