@@ -38,8 +38,12 @@
       display: flex;
       flex-wrap: wrap;
       gap: $s-xxs $s-md;
-      list-style: inside "+ ";
+      list-style: inside none;
       font-size: 24px;
+
+      li::marker{
+        content: "+ ";
+      }
     }
   }
 }
