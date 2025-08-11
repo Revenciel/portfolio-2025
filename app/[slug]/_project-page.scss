@@ -31,7 +31,7 @@
         color:#e2baff;
       }
  	    
-      h3 ~ p{
+      h3 ~ p:not(.summary-card p){
         margin-top:-24px;
       }
 
