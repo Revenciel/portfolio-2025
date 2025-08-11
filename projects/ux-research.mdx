@@ -1,0 +1,60 @@
+import { H2group } from "@/components/MDXComponents/H2group";
+import Image from 'next/image'
+import iteration from '@/public/images/ux-research/iteration.png'
+import results from '@/public/images/ux-research/results.png'
+import surveyQuestion from '@/public/images/ux-research/survey-question.png'
+import treeTest from '@/public/images/ux-research/tree-test.png'
+
+<section className='summary-card'>
+    <h2 className='visually-hidden'>Project Summary</h2>
+    <h3>Challenge</h3>
+    <p>Inform a redesign of Red Hat's "Contact" page with insights about user goals, navigation challenges, and preferred contact channels.</p>
+    <h3>Approach</h3>
+    <p>I led a two-phase research project combining surveys, tree-testing, and interviews, to uncover user needs, test navigation labels, and inform content and design decisions.</p>
+    <h3>Outcomes</h3>
+    <p>Provided clear, actionable insights that:</p>
+    <ul>
+        <li>Improved navigation clarity and label effectiveness</li>
+        <li>Balanced business routing needs with user expectations</li>
+        <li>Enhanced usability for a global audience</li>
+    </ul>
+</section>
+
+As the program lead for web UX research at Red Hat, I worked on all kinds of projects and experienced every stage of the research process, from creating and managing a project backlog, to designing and conducting studies, to analyzing and presenting results.
+
+## Project Goals
+
+I led this research project in collaboration with a team of researchers and designers to evaluate a new design for the "Contact Red Hat" page on redhat.com. The goal of this project was to make sure the design team had the information they needed to create an easy-to-use page that met the needs of both users and business stakeholders. To that end, we wanted to answer the following questions:
+
+- What do users want to achieve when contacting an IT vendor?
+- Is the information architecture of our design enabling users to achieve their goals?
+- What are our users’ preferred communication channels?
+- How do users perceive the international vs. regional contact options?
+
+We were interested in perceptions of international and regional contact options because they would help us effectively balance business needs (to route communications through a centralized point) with user needs (to be discovered).
+
+<Image src={surveyQuestion} alt='The caption "What were you trying to accomplish the last time you contacted an IT vendor?" is followed by several speach bubbles that represent customers answering that question.' className='visual'/>
+
+## Choosing Methods
+
+Because some of our questions were more analytical, and others more exploratory, I decided to run the research in two phases: an unmoderated survey and tree test to answer the qualitative questions, and a small set of interviews to explore the full context of our users’ preferences. This approach additionally enabled us to iterate on the original design using the results from Phase I, and then test those changes in Phase II.
+
+<Image src={iteration} alt='A sketch of two iterations of navigation labels on the Contact Red Hat page' className='visual'/>
+
+The survey phase allowed us to answer simple questions, like: What are your preferred methods for contacting your IT vendor’s customer service? What about the sales department, or product support? We also used a virtual tree-testing tool to test our information architecture. We asked participants to complete various tasks, (e.g., “Where would you go if you wanted to contact Red Hat to purchase a product?”) and analyzed their first clicks, in addition to their final destinations, to find out which labels were most helpful, and which had the potential to confuse.
+
+<Image src={treeTest} alt='A sketch showing the anatomy of a tree-testing question.' className='visual'/>
+
+With the interviews, we were able to explore the reasons behind our users' preferences, follow up on why certain labels led them astray, and have a detailed conversation about their preferences for international vs. regional contact options.
+
+## Highlights From Our Findings
+
+Here are a few highlights from our research, along with a few of the slides I made to present our findings:
+
+- Labels matter: Avoid vague terms like “General” or “Sales” in favor of precise, user-centered language.
+
+- Human contact wins: Phone, email, and live chat with a person far outperformed forms or chat bots.
+
+- Regional beats primary: Localized contact options were seen as more personal, helpful, and trustworthy.
+
+<Image src={results} alt='Slides summarizing UX research findings: reasons users prefer local over global sales offices, preferred communication channels such as phone or email, and reasons users dislike generic website labels.' className='visual'/>

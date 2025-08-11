@@ -15,6 +15,7 @@ export default function getPostMetadata(basePath: string, slug?: string) {
         const matterResult = matter(fileContents)
 
         return [{ //this is an array so that the function always returns an array type
+            order: matterResult.data.order,
             title: matterResult.data.title,
             type: matterResult.data.type,
             image: matterResult.data.image,
@@ -37,6 +38,7 @@ export default function getPostMetadata(basePath: string, slug?: string) {
         const fileContents = fs.readFileSync(`${basePath}/${filename}`, 'utf8')
         const matterResult = matter(fileContents)
         return {
+            order: matterResult.data.order,
             title: matterResult.data.title,
             type: matterResult.data.type,
             image: matterResult.data.image,

@@ -30,6 +30,11 @@
       abbr{
         color:#e2baff;
       }
+ 	    
+      h3 ~ p{
+        margin-top:-24px;
+      }
+
       .summary-card {
         width: calc(100% - 16px);
         background-image: url("/images/noise.png");

@@ -9,12 +9,13 @@ interface CarouselImage {
 }
 
 const images: CarouselImage[] = [
-    { id: 1, src: '/images/illustration/becoming-quietly.png', alt: 'A woman looking out a window at a field of poppies, while poppies sprout from her body and clothes' },
-    { id: 2, src: '/images/illustration/becoming-quietly.png', alt: 'A woman looking out a window at a field of poppies, while poppies sprout from her body and clothes' },
-    { id: 3, src: '/images/illustration/becoming-quietly.png', alt: 'A woman looking out a window at a field of poppies, while poppies sprout from her body and clothes' },
-    { id: 4, src: '/images/illustration/becoming-quietly.png', alt: 'A woman looking out a window at a field of poppies, while poppies sprout from her body and clothes' },
-    { id: 5, src: '/images/illustration/becoming-quietly.png', alt: 'A woman looking out a window at a field of poppies, while poppies sprout from her body and clothes' },
-
+    { id: 1, src: '/images/illustration/becoming-quietly.webp', alt: 'A woman looking out a window at a field of poppies, while poppies sprout from her body and clothes' },
+    { id: 2, src: '/images/illustration/trash-panda.webp', alt: 'A raccoon riding in a jet-powered trash can' },
+    { id: 3, src: '/images/illustration/vote-1.webp', alt: 'A fist with the words "We the people have the power - VOTE"' },
+    { id: 4, src: '/images/illustration/vote-2.webp', alt: 'An eagle with the words, "Be an American hero - VOTE"' },
+    { id: 5, src: '/images/illustration/november-child.webp', alt: 'A person sitting by a window reading a book, while their cat looks out the window' },
+    { id: 6, src: '/images/illustration/root.webp', alt: 'A pair of hands holding a carrot' },
+    { id: 7, src: '/images/illustration/drag.webp', alt: 'An illustration that, depending on how you look at it, is a pair of red lips with a mustache and a rainbow flowing out, or a woman in a rainbow evening gown.' },
 ];
 
 export const IllustrationCarousel = () => {

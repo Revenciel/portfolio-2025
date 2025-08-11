@@ -18,14 +18,15 @@ export default function Home() {
         <div className='wrapper'>
           <h2>Projects</h2>
           <div className="project-list">
-            {postMetadata.map((post) => {
-              return (
+            {postMetadata
+              .slice() // make a copy so we don't mutate the original array
+              .sort((a, b) => a.order - b.order)
+              .map((post) => (
                 <ProjectCard
                   key={post.slug}
                   post={post}
                 />
-              )
-            })}
+              ))}
           </div>
         </div>
       </section>
