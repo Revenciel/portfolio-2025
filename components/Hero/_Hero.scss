@@ -1,6 +1,7 @@
-@use '../../app/design-tokens' as *;
+@use "../../app/design-tokens" as *;
 
 #home .hero {
+  font-family: var(--f-meltmino), "Courier New", monospace;
   background-image: url("/images/hero-bg.webp"), url("/images/hero-bg-2.png");
   background-position: left;
   background-size:
@@ -41,7 +42,7 @@
       list-style: inside none;
       font-size: 24px;
 
-      li::marker{
+      li::marker {
         content: "+ ";
       }
     }
@@ -67,21 +68,20 @@
 }
 
 @media screen and (max-width: 768px) {
-
-    #home .hero {
-      background-image: url("/images/hero-bg-2.png");
-      background-size: auto;
-      background-repeat: repeat;
-      height: auto;
-      padding-top: 48px;
-      padding-bottom: 48px;
-      .wrapper {
-        padding: 0;
-        .text {
-          h1 {
-            font-size: 48px;
-          }
+  #home .hero {
+    background-image: url("/images/hero-bg-2.png");
+    background-size: auto;
+    background-repeat: repeat;
+    height: auto;
+    padding-top: 48px;
+    padding-bottom: 48px;
+    .wrapper {
+      padding: 0;
+      .text {
+        h1 {
+          font-size: 48px;
         }
       }
     }
+  }
 }

@@ -9,19 +9,15 @@ export default function ProjectHero({ slug }: { slug: string }) {
     return (
         <section className='band hero'>
             <div className='wrapper'>
-                <div className='text'>
-                    <hgroup>
-                        <span className='eyebrow'>{metadata[0].type}</span>
-                        <h1>{metadata[0].title}</h1>
-                    </hgroup>
-                    <Link className='back' href='/#projects'>
+                <hgroup>
+                    <span className='eyebrow'>{metadata[0].type}</span>
+                    <h1>{metadata[0].title}</h1>
+                </hgroup>
+                <Link className='back' href='/#projects'>
 
-                        Back to Projects
-                        <img src="/images/icon-back.svg" className="icon" aria-hidden="true" alt='' />
-
-                    </Link>
-                </div>
-                {/* <Image src={metadata[0].image} alt={metadata[0].imageAltText}></Image> */}
+                    Back to Projects
+                    <img src="/images/icon-back.svg" className="icon" aria-hidden="true" alt='' />
+                </Link>
             </div>
         </section>
     );

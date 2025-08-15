@@ -24,10 +24,8 @@ export default async function ProjectPage({ params }: { params: Promise<{ slug: 
   return (
     <main className="project-page">
       <ProjectHero slug={slug}/>
-      <article className='band'>
-        <div className='wrapper'>
+      <article>
           <MdxContent components={mdxComponents} />
-        </div>
       </article>
     </main>
   )

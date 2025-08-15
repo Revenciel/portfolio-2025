@@ -36,13 +36,14 @@ nav {
 
         width: 64px;
         height: 64px;
-        padding-top: 20px;
+        padding-top: 24px;
         padding-left: $s-xs;
         margin-bottom: $s-xs;
 
         backdrop-filter: blur(4px);
         background-color: $c-primary;
         color: $c-dark-black;
+        font-family:var(--f-meltmino);
         font-size: 18px;
         letter-spacing: 10%;
         text-transform: uppercase;
@@ -61,7 +62,7 @@ nav {
           height: 18px;
           width: 18px;
           position: relative;
-          top: 2px;
+          bottom: 2px;
         }
       }
     }

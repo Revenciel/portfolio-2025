@@ -1,5 +1,7 @@
 import { H2group } from "@/components/MDXComponents/H2group";
-import Image from 'next/image'
+import { Section } from "@/components/MDXComponents/Section"; 
+ import Image from 'next/image'
+
 import featuresSection from '@/public/images/red-hat-product-pages/features-section.webp'
 import featuresVariations from '@/public/images/red-hat-product-pages/features-variations.webp'
 import productHeroes from '@/public/images/red-hat-product-pages/product-heroes.webp'
@@ -7,64 +9,80 @@ import template from '@/public/images/red-hat-product-pages/template.webp'
 import productList from '@/public/images/red-hat-product-pages/product-list.webp'
 
 <section className='summary-card'>
-    <h2 className='visually-hidden'>Project Summary</h2>
-    <h3>Challenge</h3>
-    <p>Red Hat's complex and extensive product portfolio lacked consistent, clear design patterns for its product pages. Customers often struggled to distinguish between similar offerings, slowing decision-making and risking abandonment.</p>
-    <h3>Approach</h3>
-    <p>I designed scalable, templated product pages informed by heat map data and past UX research studies. I standardized high-performing patterns and provided guidelines for content, as well as created new hero patterns to differentiate between product types.</p>
-    <h3>Outcomes</h3>
-    <ul>
-        <li>Marketing, product, and dev teams aligned on a new shared, scalable template system that could grow with our portfolio.</li>
-        <li>Visual cues helped customers quickly distinguish different types of product pages, reducing confusion and streamlining their product search.</li>
-    </ul>
+    <div className='wrapper'>
+        <h2 className='visually-hidden'>Project Summary</h2>
+        <div className='summary-card'>
+            <div>
+                <h3>Challenge</h3>                    <p>Red Hat's complex and extensive product portfolio lacked consistent, clear design patterns for its product pages. Customers often struggled to distinguish between similar offerings, slowing decision-making and risking abandonment.</p>
+            </div>
+            <div>
+                <h3>Approach</h3>
+                <p>I designed scalable, templated product pages informed by heat map data and past UX research studies. I standardized high-performing patterns and provided guidelines for content, as well as created new hero patterns to differentiate between product types.</p>
+            </div>
+            <div>
+                <h3>Outcomes</h3>
+                <ul>
+                    <li>Marketing, product, and dev teams aligned on a new shared, scalable template system that could grow with our portfolio.</li>
+                    <li>Visual cues helped customers quickly distinguish different types of product pages, reducing confusion and streamlining their product search.</li>
+                </ul>
+            </div>
+        </div>
+
+
+    </div>
 </section>
 
-<H2group eyebrow="Challenge + Opportunity" heading="Guiding Users Through a Complex Product Ecosystem" />
+<Section theme='alt'>
+    <H2group eyebrow="Challenge + Opportunity" heading="Guiding Users Through a Complex Product Ecosystem" />
 
-<Image src={productList} alt="A screen shot of a list of Red Hat's many products, including many of with similar names." className='visual'/>
+    <Image src={productList} alt="A screen shot of a list of Red Hat's many products, including many of with similar names." className='visual'/>
 
-With 16+ websites and a portfolio of dozens of complex products under Red Hat’s belt, consistent, clarifying design is critical for guiding users across the system. As Red Hat’s portfolio continued to grow, adding stand-alone products, product add-ons, product families, and product bundles—so too did the complexity of navigating these products.
+    With 16+ websites and a portfolio of dozens of complex products under Red Hat’s belt, consistent, clarifying design is critical for guiding users across the system. As Red Hat’s portfolio continued to grow, adding stand-alone products, product add-ons, product families, and product bundles—so too did the complexity of navigating these products.
 
-Without consistent patterns or clear visual differentiation, customers were forced to read through a lot of content just to figure out which product they were looking at. Were they looking for OpenShift Dedicated, or OpenShift Data Foundation? Or was it OpenShift Platform Plus they had been interested in? This friction risked frustrating customers, slowing their decision-making process, and potentially causing them to abandon their search for a Red Hat product.
+    Without consistent patterns or clear visual differentiation, customers were forced to read through a lot of content just to figure out which product they were looking at. Were they looking for OpenShift Dedicated, or OpenShift Data Foundation? Or was it OpenShift Platform Plus they had been interested in? This friction risked frustrating customers, slowing their decision-making process, and potentially causing them to abandon their search for a Red Hat product.
 
-My task was to create a templated system that would:
-- Scale across dozens of existing and future products
-- Clearly differentiate product types at first glance
-- Work with and expand upon the existing design system framework
+    My task was to create a templated system that would:
+    - Scale across dozens of existing and future products
+    - Clearly differentiate product types at first glance
+    - Work with and expand upon the existing design system framework
+</Section>
+<Section theme=''>
+    <H2group eyebrow="Discovery" heading="Auditing & Analyzing Performance of Current Patterns" />
 
-<H2group eyebrow="Discovery" heading="Auditing & Analyzing Performance of Current Patterns" />
+    I began by auditing all existing product pages, cataloging the content sections they used (feature highlights, pricing, etc.); the design system patterns applied in each section; and inconsistencies in structure, style, and content length. I then analyzed heat map data of all our product pages to find out which of current patterns were performing well and receiving a lot of engagement.
 
-I began by auditing all existing product pages, cataloging the content sections they used (feature highlights, pricing, etc.); the design system patterns applied in each section; and inconsistencies in structure, style, and content length. I then analyzed heat map data of all our product pages to find out which of current patterns were performing well and receiving a lot of engagement.
+    <Image src={featuresVariations} alt='Example of 5 different layouts for a "Features and Benefits" section on a product page' className='visual glow'/>
 
-<Image src={featuresVariations} alt='Example of 5 different layouts for a "Features and Benefits" section on a product page' className='visual glow'/>
+    I was also able to incorporate my previous UX research studies on how our product portfolio was categorized to ensure that my work would expand on and reinforce the categorization models that worked best for our customers.
+</Section>
+<Section theme='alt'>
+    <H2group eyebrow="Strategy" heading="Balancing Consistency and Differentiation" />
 
-I was also able to incorporate my previous UX research studies on how our product portfolio was categorized to ensure that my work would expand on and reinforce the categorization models that worked best for our customers.
+    ### Creating Consistency
+    Let’s dive more into the feature highlights section. After reviewing heatmap data, I found that feature highlights with longer text or an embedded video got more engagement when limited to up to three highlights. Larger lists of 3–6 feature highlights, however, were effective when content was more concise.
 
-<H2group eyebrow="Strategy" heading="Balancing Consistency and Differentiation" />
+    Based on this data, I chose two pattern options to pull into the product page template, and provided guidelines and recommendations for their use, including content themes and word-count recommendations.
 
-### Creating Consistency
-Let’s dive more into the feature highlights section. After reviewing heatmap data, I found that feature highlights with longer text or an embedded video got more engagement when limited to up to three highlights. Larger lists of 3–6 feature highlights, however, were effective when content was more concise.
+    <Image src={featuresSection} alt='Two standardized patterns for a "Features and Benefits" section' className='visual'/>
 
-Based on this data, I chose two pattern options to pull into the product page template, and provided guidelines and recommendations for their use, including content themes and word-count recommendations.
+    ### Differentiating Products
+    While internal consistency was key, differentiation was equally important. The product page hero would be the primary visual indicator of product type.
 
-<Image src={featuresSection} alt='Two standardized patterns for a "Features and Benefits" section' className='visual'/>
+    I expanded on the [Red Hat design system system](https://ux.redhat.com/), introducing new hero options for product pages, including variations for stand-alone products, product families, and products within a family or bundle. These distinctions would help customers quickly orient themselves without needing to read deeply into the page content.
 
-### Differentiating Products
-While internal consistency was key, differentiation was equally important. The product page hero would be the primary visual indicator of product type.
+    <Image src={productHeroes} alt='Three distinct hero patterns for three different types of products: stand-alone, family, and family member' className='visual'/>
 
-I expanded on the [Red Hat design system system](https://ux.redhat.com/), introducing new hero options for product pages, including variations for stand-alone products, product families, and products within a family or bundle. These distinctions would help customers quickly orient themselves without needing to read deeply into the page content.
+    ### Additional Considerations
+    In creating product page design standards, I also considered the optimal page length for users to stay engaged, visual interest in the combination of patterns chosen, and variations for products that warranted special considerations or exceptions.
+</Section>
+<Section theme=''>
+    <H2group eyebrow="Outcomes" heading="A Clarified and Scalable UX" />
 
-<Image src={productHeroes} alt='Three distinct hero patterns for three different types of products: stand-alone, family, and family member' className='visual'/>
+    The new product page templates and guidelines transformed how Red Hat’s product portfolio is presented online:
+    - **Improved Visual Clarity:** Visual differentiation reduced navigation confusion and improved product findability
+    - **Cross-Team Alignment:** Shared templates and rules gave marketing, product, and development teams a common starting point, reducing rework and fostering a shared vision
+    - **Scalable Foundation:** As Red Hat’s portfolio continues to grow, new products can be added without reinventing page layouts or content strategy
 
-### Additional Considerations
-In creating product page design standards, I also considered the optimal page length for users to stay engaged, visual interest in the combination of patterns chosen, and variations for products that warranted special considerations or exceptions.
-
-<H2group eyebrow="Outcomes" heading="A Clarified and Scalable UX" />
-
-The new product page templates and guidelines transformed how Red Hat’s product portfolio is presented online:
-- **Improved Visual Clarity:** Visual differentiation reduced navigation confusion and improved product findability
-- **Cross-Team Alignment:** Shared templates and rules gave marketing, product, and development teams a common starting point, reducing rework and fostering a shared vision
-- **Scalable Foundation:** As Red Hat’s portfolio continues to grow, new products can be added without reinventing page layouts or content strategy
-
-<Image src={template} alt='Three distinct hero patterns for three different types of products: stand-alone, family, and family member' className='visual glow'/>
+    <Image src={template} alt='Three distinct hero patterns for three different types of products: stand-alone, family, and family member' className='visual glow'/>
+</Section>
 

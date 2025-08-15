@@ -1,5 +1,7 @@
-import { H2group } from "@/components/MDXComponents/H2group";
+import { H2group } from "@/components/MDXComponents/H2group"
+import { Section } from "@/components/MDXComponents/Section"
 import Image from 'next/image'
+
 import audit from '@/public/images/multi-brand-design-system/audit.webp'
 import colorThemes from '@/public/images/multi-brand-design-system/color-themes.webp'
 import components from '@/public/images/multi-brand-design-system/components.webp'
@@ -8,83 +10,99 @@ import siteComparison from '@/public/images/multi-brand-design-system/site-compa
 import stakeholderNeeds from '@/public/images/multi-brand-design-system/stakeholder-needs.webp'
 
 <section className='summary-card'>
-    <h2 className='visually-hidden'>Project Summary</h2>
-    <h3>Challenge</h3>
-    <p>As the sole designer on a team managing over a dozen branded marketing sites, I identified recurring issues with accessibility, consistency, and redundant work. </p>
-    <h3>Approach</h3>
-    <p>I proposed and created a scalable, multi-brand design system—made to streamline workflows, enforce accessibility, and maintain brand standards at scale.</p>
-    <h3>Outcomes</h3>
-    <p>Adopting a design system allowed me and my team to:</p>
-    <ul>
-        <li>Reduce time-to-launch on new sites from 6 to 3 weeks</li>
-        <li>Eliminate accessibility & consistency issues</li>
-        <li>Simplify the content-editing experience</li>
-        <li>Apply A/B testing results at scale</li>
-    </ul>
+    <div className='wrapper'>
+        <h2 className='visually-hidden'>Project Summary</h2>
+        <div className='summary-card'>
+            <div>
+                <h3>Challenge</h3>
+                <p>As the sole designer on a team managing over a dozen branded marketing sites, I identified recurring issues with accessibility, consistency, and redundant work. </p>
+            </div>
+            <div>
+                <h3>Approach</h3>
+                <p>I proposed and created a scalable, multi-brand design system—made to streamline workflows, enforce accessibility, and maintain brand standards at scale.</p>
+            </div>
+            <div>
+                <h3>Outcomes</h3>
+                    <ul>
+                        <li>Reduced time-to-launch on new sites from 6 to 3 weeks</li>
+                        <li>Eliminated accessibility & consistency issues</li>
+                        <li>Accelerated A/B testing capabilities</li>
+                    </ul>
+            </div>
+        </div>
+        <Image src={components} alt='High-level view of a collection of design system components' className='visual'/>
+    </div>
 </section>
 
+<Section theme='alt'>
 <H2group eyebrow="Challenge + Opportunity" heading="Tidying Up with a Design System
-" />
+    " />
 
-<Image src={components} alt='High-level view of a collection of design system components' className='visual'/>
+    At Home Solutions, a small team of devs and one designer (that’s me!) managed marketing landing pages for over a dozen brands. We had to work quickly to keep up with partner requests while continuously testing changes to improve conversion rates. But working so fast came at a cost: inconsistencies forced devs to recreate similar designs from scratch every time we made a new site. Content editors frequently violated accessibility guidelines because there weren’t enough guardrails for them in the <abbr title='Content Management System'>CMS</abbr>. And our sites didn’t look trustworthy, because our piecemeal approach to improvements resulted in a lack of internal consistency. In short, we had a mess on our hands.
 
-At Home Solutions, a small team of devs and one designer (that’s me!) managed marketing landing pages for over a dozen brands. We had to work quickly to keep up with partner requests while continuously testing changes to improve conversion rates. But working so fast came at a cost: inconsistencies forced devs to recreate similar designs from scratch every time we made a new site. Content editors frequently violated accessibility guidelines because there weren’t enough guardrails for them in the <abbr title='Content Management System'>CMS</abbr>. And our sites didn’t look trustworthy, because our piecemeal approach to improvements resulted in a lack of internal consistency. In short, we had a mess on our hands.
+    When our engineering director announced we were going to migrate to a new CMS, I proposed standardizing all our sites with a multi-brand design system. Since we were going to re-code our websites anyway, the team was receptive when I explained how a design system would drastically accelerate the launching of new sites, streamline implementing <abbr title='Conversion Rate Optimization'>CRO</abbr> successes across brands, and bake accessibility into the process.
+</Section>
 
-When our engineering director announced we were going to migrate to a new CMS, I proposed standardizing all our sites with a multi-brand design system. Since we were going to re-code our websites anyway, the team was receptive when I explained how a design system would drastically accelerate the launching of new sites, streamline implementing <abbr title='Conversion Rate Optimization'>CRO</abbr> successes across brands, and bake accessibility into the process.
+<Section theme=''>
+    <H2group eyebrow="Discovery" heading="Design Supports the Whole Team" />
 
-<Image src={stakeholderNeeds} alt='A graphic which reads,"How can I create a design system that remains simple enough for a single designer to maintain for over a dozen sites, allows devs to adapt existing components easily for new brands, and gives the content team flexibility, while maintaining accessibility and consistency?"' className='visual'/>
+    My first priority was gathering input to ensure the design system would support the whole team—no one will adopt a process that makes their job harder! I facilitated conversations with each stakeholder group, explaining what a design system is and how we could use it, and then asking about their specific pain points and goals for the new site launch process.
 
-<H2group eyebrow="Discovery" heading="Design Supports the Whole Team" />
+    <Image src={stakeholderNeeds} alt='A graphic which reads,"How can I create a design system that remains simple enough for a single designer to maintain for over a dozen sites, allows devs to adapt existing components easily for new brands, and gives the content team flexibility, while maintaining accessibility and consistency?"' className='visual'/>
 
-My first priority was gathering input to ensure the design system would support the whole team—no one will adopt a process that makes their job harder! I facilitated conversations with each stakeholder group, explaining what a design system is and how we could use it, and then asking about their specific pain points and goals for the new site launch process.
+    {/* <blockquote>**Devs:** We need a single source of truth for content and design; documentation for the design system that establishes shared terminology for the whole team; and reusable components and templates that we can deploy at scale across different branded sites.</blockquote>
+    <blockquote>**Content editors:** We need to be able to run small-scale tests, like changing copy and images, without involving devs or designers. We need to reduce unneeded optionality that makes updating content an overly complex process.</blockquote>
+    <blockquote>**CRO strategists:** We need to be able to try new things in isolation (e.g. on one site), and then apply successful changes at scale.</blockquote>
+    <blockquote>**Design:** I need simplicity to manage a design system for over a dozen sites by myself, while preserving each brand's unique visual identity. I need to make sure that content-editing options don’t allow accessibility violations.</blockquote> */}
 
-<blockquote>**Devs:** We need a single source of truth for content and design; documentation for the design system that establishes shared terminology for the whole team; and reusable components and templates that we can deploy at scale across different branded sites.</blockquote>
-<blockquote>**Content editors:** We need to be able to run small-scale tests, like changing copy and images, without involving devs or designers. We need to reduce unneeded optionality that makes updating content an overly complex process.</blockquote>
-<blockquote>**CRO strategists:** We need to be able to try new things in isolation (e.g. on one site), and then apply successful changes at scale.</blockquote>
-<blockquote>**Design:** I need simplicity to manage a design system for over a dozen sites by myself, while preserving each brand's unique visual identity. I need to make sure that content-editing options don’t allow accessibility violations.</blockquote>
+    ### Auditing the Current Site Portfolio
+    The second major step of discovery was to audit our site portfolio, cataloging the components used across each brand. When I found unique or variant components, I partnered with CRO strategists to decide whether to remove them, consolidate them into shared patterns, or, occasionally, retain them as brand-specific exceptions.
 
-The second major step of discovery was to audit our site portfolio, cataloging the components used across each brand. When I found unique or variant components, I partnered with CRO strategists to decide whether to remove them, consolidate them into shared patterns, or, occasionally, retain them as brand-specific exceptions.
+    <Image src={audit} alt='Partial view of a spreadsheet with columns for brand names and rows for web component names. It counts how often components are used across different brands.' className='visual'/>
+</Section>
 
-<Image src={audit} alt='Partial view of a spreadsheet with columns for brand names and rows for web component names. It counts how often components are used across different brands.' className='visual'/>
+<Section theme='alt'>
+    <H2group eyebrow="Strategy" heading="Atomic Design, Variables, and Color Themes" />
 
-<H2group eyebrow="Strategy" heading="Atomic Design, Variables, and Color Themes" />
+    ### Atomic Design
+    Using the atomic design system helped me build a design system that could easily scale from individual components to whole-site templates. It also established a shared terminology, simplifying the hand-off process through design, review, and development.
 
-### Atomic Design
-Using the atomic design system helped me build a design system that could easily scale from individual components to whole-site templates. It also established a shared terminology, simplifying the hand-off process through design, review, and development.
+    ### Design Tokens as CSS Variables
+    I needed to make standardized components that could be easily rebranded at scale. To do this, I distilled our partners’ brand identities into a few key values, which devs could easily swap out from site to site as CSS variables.
 
-### Design Tokens as CSS Variables
-I needed to make standardized components that could be easily rebranded at scale. To do this, I distilled our partners’ brand identities into a few key values, which devs could easily swap out from site to site as CSS variables.
+    <Image src={designTokens} alt='Infographic showing 4 different types of design tokens: colors, font families, border radii, and border styles' className='visual'/>
 
-<Image src={designTokens} alt='Infographic showing 4 different types of design tokens: colors, font families, border radii, and border styles' className='visual'/>
+    By simply swapping the values for these variables and making just a few manual tweaks, I can convert an entire site design from one brand to another.
 
-By simply swapping the values for these variables and making just a few manual tweaks, I can convert an entire site design from one brand to another.
+    <Image src={siteComparison} alt='Partial view of two websites with a similar layout but different content, colors, fonts, and border styles.' className='visual'/>
 
-<Image src={siteComparison} alt='Partial view of two websites with a similar layout but different content, colors, fonts, and border styles.' className='visual'/>
+    ### Color Accessibility at Scale
+    I needed a simple, adaptable color system that preserved accessibility without introducing unnecessary complexity. To do this, I created a minimal color palette: just five neutral shades, each defined by its contrast ratio with white, complemented by up to three branded accent colors. These five neutrals were enough to support multiple accessible color combinations while keeping the system simple.
 
-### Color Accessibility at Scale
-I needed a simple, adaptable color system that preserved accessibility without introducing unnecessary complexity. To do this, I created a minimal color palette: just five neutral shades, each defined by its contrast ratio with white, complemented by up to three branded accent colors. These five neutrals were enough to support multiple accessible color combinations while keeping the system simple.
+    <Image src={colorThemes} alt='View of three different accessible color combinations, each showing multiple components, all for a single brand.' className='visual' />
 
-<Image src={colorThemes} alt='View of three different accessible color combinations, each showing multiple components, all for a single brand.' className='visual' />
+    Additionally, these combinations would replace the content team’s ability to change colors in a component. Instead of allowing the content team to change colors individually, potentially introducing accessibility and brand violations, they could instead choose from a list of accessible, on-brand color themes for a given component.
 
-Additionally, these combinations would replace the content team’s ability to change colors in a component. Instead of allowing the content team to change colors individually, potentially introducing accessibility and brand violations, they could instead choose from a list of accessible, on-brand color themes for a given component.
+    Finally, by categorizing the neutral shades by contrast ratio, it was easy to map shades from any brand’s palette into the system while maintaining consistent accessibility. Only the use of accent colors varied between brands, depending on their intensity and brightness.
+</Section>
 
-Finally, by categorizing the neutral shades by contrast ratio, it was easy to map shades from any brand’s palette into the system while maintaining consistent accessibility. Only the use of accent colors varied between brands, depending on their intensity and brightness.
+<Section>
+    <H2group eyebrow="Outcomes" heading="Launching a Better Product in Half the Time" />
 
-<H2group eyebrow="Outcomes" heading="Launching a Better Product in Half the Time" />
+    The new design system had a transformative impact across design, development, and content workflows.
 
-The new design system had a transformative impact across design, development, and content workflows.
+    ### Faster, More Consistent Development
+    By establishing a shared component library, paired with clearly documented tokens in Figma, we gave developers a single source of truth for content and visual design. Developers no longer needed to start from scratch when launching a new brand site—components could be reused, and brand-specific tweaks were applied efficiently using CSS variables. This cut our typical dev time for a new site in half.
 
-### Faster, More Consistent Development
-By establishing a shared component library, paired with clearly documented tokens in Figma, we gave developers a single source of truth for content and visual design. Developers no longer needed to start from scratch when launching a new brand site—components could be reused, and brand-specific tweaks were applied efficiently using CSS variables. This cut our typical dev time for a new site in half.
+    ### Scalable, Streamlined Design
+    The design system allowed me to build sites faster by reusing templates and patterns. With a core library of components already vetted for accessibility and branded variations handled through tokens, I could spend less time reinventing layouts and more time focusing on refinement.
 
-### Scalable, Streamlined Design
-The design system allowed me to build sites faster by reusing templates and patterns. With a core library of components already vetted for accessibility and branded variations handled through tokens, I could spend less time reinventing layouts and more time focusing on refinement.
+    ### Accessibility guardrails in the CMS
+    For our content team, the system introduced guardrails that reduced the likelihood of accessibility violations—especially around color contrast and font sizing. Instead of customizing individual styles, editors chose from pre-vetted design themes, ensuring consistent, accessible designs across all sites.
 
-### Accessibility guardrails in the CMS
-For our content team, the system introduced guardrails that reduced the likelihood of accessibility violations—especially around color contrast and font sizing. Instead of customizing individual styles, editors chose from pre-vetted design themes, ensuring consistent, accessible designs across all sites.
+    ### Faster A/B Testing and Scalable CRO
+    Having a shared system improved our ability to test and apply successful design changes. If a new hero variant performed well on one site, we could quickly roll it out to others using the same structure. Parallel A/B testing across sites became more feasible, and we were able to iterate more quickly toward higher-converting designs.
 
-### Faster A/B Testing and Scalable CRO
-Having a shared system improved our ability to test and apply successful design changes. If a new hero variant performed well on one site, we could quickly roll it out to others using the same structure. Parallel A/B testing across sites became more feasible, and we were able to iterate more quickly toward higher-converting designs.
-
-### A Unified Yet Flexible Brand Experience
-Finally, our new sites looked more cohesive, trustworthy, and professional. Every brand retained its unique identity with its own set of styles, but all sites now followed the same basic structure, built around accessibility, usability, and conversion rate—resulting in a better user experience across the board.
+    ### A Unified Yet Flexible Brand Experience
+    Finally, our new sites looked more cohesive, trustworthy, and professional. Every brand retained its unique identity with its own set of styles, but all sites now followed the same basic structure, built around accessibility, usability, and conversion rate—resulting in a better user experience across the board.
+</Section>

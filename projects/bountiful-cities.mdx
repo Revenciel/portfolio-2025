@@ -1,51 +1,64 @@
-import { H2group } from "@/components/MDXComponents/H2group";
+import { H2group } from "@/components/MDXComponents/H2group"
+import { Section } from "@/components/MDXComponents/Section";
 import Image from 'next/image'
 import Link from 'next/link'
+
 import mobileViews from '@/public/images/bountiful-cities/mobile-views.png'
 import colors from '@/public/images/bountiful-cities/colors.png'
 import news from '@/public/images/bountiful-cities/news.png'
 
 <section className='summary-card'>
-    <h2 className='visually-hidden'>Project Summary</h2>
-    <h3>Challenge</h3>
-    <p>Bountiful Cities is a non-profit that provides urban agriculture tools and education in Asheville, NC. Their website is catered towards donors and volunteers, but didn't serve the communities who might benefit from Bountiful Cities' programming.</p>
-    <h3>Approach</h3>
-    <p>I evaluated the existing site, as well as the program offerings of Bountiful Cities, in order to build a new, comprehensive information architecture. I mapped out new user journeys designed to support each intended audience, and I created a new logo and branding designed to feel vibrant, welcoming, and inclusive.</p>
-    <h3>Outcomes</h3>
-    <p>The new information architecture is both expanded and simplified, providing top-level navigational cues for donors, volunteers, AND those seeking resources.</p>
+    <div className='wrapper'>
+        <h2 className='visually-hidden'>Project Summary</h2>
+        <div className='summary-card'>
+            <div>
+                <h3>Challenge</h3>
+                <p>Bountiful Cities is a non-profit that provides urban agriculture tools and education in Asheville, NC. Their website is catered towards donors and volunteers, but didn't serve the communities who might benefit from Bountiful Cities' programming.</p>
+            </div>
+            <div>
+                <h3>Approach</h3>
+                <p>I evaluated the existing site, as well as the program offerings of Bountiful Cities, in order to build a new, comprehensive information architecture. I mapped out new user journeys designed to support each intended audience, and I created a new logo and branding designed to feel vibrant, welcoming, and inclusive.</p>
+            </div>
+            <div>
+                <h3>Outcomes</h3>
+                <p>The new information architecture is both expanded and simplified, providing top-level navigational cues for donors, volunteers, AND those seeking resources.</p>
+            </div>
+        </div>
+        <Image src={mobileViews} alt="Two screen shots of mobile designs for the new Bountiful Cities website, showcasing vibrant colors, illustrations, and clear typography." className='visual'/>
+
+        <Image src={colors} alt="The new Bountiful Cities logo against each of the new brand colors." className='visual'/>
+
+        <Image src={news} alt='The desktop version of a new "news" page for the Bountiful Cities website.' className='visual'/>
+    </div>
 </section>
 
-<Image src={mobileViews} alt="Two screen shots of mobile designs for the new Bountiful Cities website, showcasing vibrant colors, illustrations, and clear typography." className='visual'/>
+<Section theme='alt'>
+  <H2group eyebrow="Demo" heading="Explore the Figma Prototypes" />
 
-<Image src={colors} alt="The new Bountiful Cities logo against each of the new brand colors." className='visual'/>
+  I recommend viewing the prototypes in full screen, and from a computer.
 
-<Image src={news} alt='The desktop version of a new "news" page for the Bountiful Cities website.' className='visual'/>
-
-<H2group eyebrow="Demo" heading="Explore the Figma Prototypes" />
-
-I recommend viewing the prototypes in full screen, and from a computer.
-
- <div className='cta'>
-    <Link href='https://www.figma.com/proto/sZD1OBfKKxn0ZR1xqgf1Dj/Bountiful-Cities-site-redesign?node-id=1-811&t=vSirLYMyPdljXfDu-1&scaling=scale-down&content-scaling=fixed&page-id=0%3A1&starting-point-node-id=1%3A811' target='_blank'>
-      <span className="label">
-        Mobile Prototype
-      <img src="/images/arrow.svg" className="icon" aria-hidden="true" alt=''/>
-    </span>
-  </Link>
-</div>
- <div className='cta'>
-    <Link href='https://www.figma.com/proto/sZD1OBfKKxn0ZR1xqgf1Dj/Bountiful-Cities-site-redesign?node-id=1-1650&t=MXbPsljjj92TUD4P-0&scaling=scale-down&content-scaling=fixed&page-id=1%3A2&starting-point-node-id=1%3A1650' target='_blank'>
-      <span className="label">
-        Tablet Prototype
-      <img src="/images/arrow.svg" className="icon" aria-hidden="true" alt=''/>
-    </span>
-  </Link>
-</div>
- <div className='cta'>
-    <Link href='https://www.figma.com/proto/sZD1OBfKKxn0ZR1xqgf1Dj/Bountiful-Cities-site-redesign?node-id=1-2770&t=1ctJoc4CrANlK6lj-1&scaling=scale-down&content-scaling=fixed&page-id=1%3A3&starting-point-node-id=1%3A2770' target='_blank'>
-      <span className="label">
-        Desktop Prototype
-      <img src="/images/arrow.svg" className="icon" aria-hidden="true" alt=''/>
-    </span>
-  </Link>
-</div>
+  <div className='cta'>
+      <Link href='https://www.figma.com/proto/sZD1OBfKKxn0ZR1xqgf1Dj/Bountiful-Cities-site-redesign?node-id=1-811&t=vSirLYMyPdljXfDu-1&scaling=scale-down&content-scaling=fixed&page-id=0%3A1&starting-point-node-id=1%3A811' target='_blank'>
+        <span className="label">
+          Mobile Prototype
+        <img src="/images/arrow.svg" className="icon" aria-hidden="true" alt=''/>
+      </span>
+    </Link>
+  </div>
+  <div className='cta'>
+      <Link href='https://www.figma.com/proto/sZD1OBfKKxn0ZR1xqgf1Dj/Bountiful-Cities-site-redesign?node-id=1-1650&t=MXbPsljjj92TUD4P-0&scaling=scale-down&content-scaling=fixed&page-id=1%3A2&starting-point-node-id=1%3A1650' target='_blank'>
+        <span className="label">
+          Tablet Prototype
+        <img src="/images/arrow.svg" className="icon" aria-hidden="true" alt=''/>
+      </span>
+    </Link>
+  </div>
+  <div className='cta'>
+      <Link href='https://www.figma.com/proto/sZD1OBfKKxn0ZR1xqgf1Dj/Bountiful-Cities-site-redesign?node-id=1-2770&t=1ctJoc4CrANlK6lj-1&scaling=scale-down&content-scaling=fixed&page-id=1%3A3&starting-point-node-id=1%3A2770' target='_blank'>
+        <span className="label">
+          Desktop Prototype
+        <img src="/images/arrow.svg" className="icon" aria-hidden="true" alt=''/>
+      </span>
+    </Link>
+  </div>
+</Section>

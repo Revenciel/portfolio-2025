@@ -1,14 +1,19 @@
-@use './design-tokens' as *;
-@use './[slug]/project-page' as *;
-@use '../components/Hero/Hero' as *;
-@use '../components/Footer/Footer' as *;
-@use '../components/ProjectCard/ProjectCard' as *;
-@use '../components/CTA/CTA' as *;
-@use '../components/Carousel/Carousel' as *;
-@use '../components/Nav/Nav' as *;
-@use '../components/ContactForm/ContactForm' as *;
-@use '../components/ProjectHero/ProjectHero' as *;
+@use "./design-tokens" as *;
+@use "./[slug]/project-page" as *;
+@use "../components/Hero/Hero" as *;
+@use "../components/Footer/Footer" as *;
+@use "../components/ProjectCard/ProjectCard" as *;
+@use "../components/CTA/CTA" as *;
+@use "../components/Carousel/Carousel" as *;
+@use "../components/Nav/Nav" as *;
+@use "../components/ContactForm/ContactForm" as *;
+@use "../components/ProjectHero/ProjectHero" as *;
 
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
 
 html,
 body {
@@ -19,69 +24,18 @@ body {
   letter-spacing: +0.5%;
 }
 
-.visually-hidden:not(:focus):not(:active) {
-  clip: rect(0 0 0 0);
-  clip-path: inset(50%);
-  height: 1px;
-  overflow: hidden;
-  position: absolute;
-  white-space: nowrap;
-  width: 1px;
-}
-
 body {
   color: $c-text;
   background: $c-dark-black;
   font:
-    400 16px var(--f-meltmino),
-    "Courier New",
-    monospace;
+    400 16px var(--f-atkins),
+    sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
-* {
-  box-sizing: border-box;
-  padding: 0;
-  margin: 0;
-}
-
-#home h2 {
-  font:
-    400 48px var(--f-nicolatte),
-    "Courier New",
-    monospace;
-  line-height: 1.5;
-  letter-spacing: 10%;
-
-  background-image: url("/images/h1-bg.webp");
-  color: $c-heading;
-  width: 144px; /* sizing square */
-  height: 144px; /* sizing square */
-  padding-top: 40px; /* positioning text */
-  padding-left: 24px; /* positioning text */
-  white-space: nowrap;
-}
-
-@media screen and (max-width: 768px) {
-  #home h2,
-  .project hgroup {
-    width: 96px;
-    height: 96px;
-    font-size: 40px;
-    padding-top: 24px;
-  }
-}
-
-a {
-  color: $c-primary;
-  text-decoration: none;
-}
-
-section.band,
-article.band {
+section {
   padding: $s-lg;
-
   .wrapper {
     margin-right: $nav-width;
     max-width: 1200px;
@@ -91,8 +45,104 @@ article.band {
   }
 }
 
-blockquote{
-  padding-left:48px;
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+ul,
+ol {
+  max-width: 640px;
+}
+
+h1 {
+  font-weight: 400;
+}
+
+h2,
+hgroup {
+  font-family: var(--f-nicolatte), "Courier New", monospace;
+  font-size: 40px;
+  font-weight: 400;
+  line-height: 120%;
+  letter-spacing: 7%;
+
+  color: $c-heading;
+}
+
+#home h2{
+  background-image: url("/images/h1-bg.webp");
+  font-size: 48px;
+  width: 104px; /* sizing square */
+  height: 104px; /* sizing square */
+  padding-top: 30px; /* positioning text */
+  padding-left: 24px; /* positioning text */
+}
+// h2:not(hgroup > h2) {
+//   background-image: url("/images/h1-bg.webp");
+//   font-size: 48px;
+//   width: 104px; /* sizing square */
+//   height: 104px; /* sizing square */
+//   padding-top: 30px; /* positioning text */
+//   padding-left: 24px; /* positioning text */
+// }
+
+h3 {
+  font-family: var(--f-meltmino), "Courier New", monospace;
+  font-size: 20px;
+  line-height: 120%;
+  letter-spacing: 0;
+  color: $c-heading;
+}
+
+hgroup {
+  display: flex;
+  flex-direction: column;
+  gap: $s-xxs;
+  .eyebrow {
+    font-family: var(--f-meltmino), "Courier New", monospace;
+    font-size: 20px;
+    font-weight: 700;
+    letter-spacing: 0;
+    text-transform: uppercase;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  h2,
+  hgroup {
+    font-size: 40px;
+  }
+  h2:not(hgroup > h2) {
+    padding-top: 24px;
+    width: 96px;
+    height: 96px;
+  }
+}
+
+a {
+  color: $c-primary;
+  text-decoration: none;
+}
+
+ul li{
+  margin-left:1em;
+}
+
+blockquote {
+  padding-left: 48px;
+}
+
+.visually-hidden:not(:focus):not(:active) {
+  clip: rect(0 0 0 0);
+  clip-path: inset(50%);
+  height: 1px;
+  overflow: hidden;
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
 }
 
 // *********** HOME PAGE

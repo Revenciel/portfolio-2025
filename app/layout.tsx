@@ -5,6 +5,13 @@ import "./styles.scss";
 import Footer from "@/components/Footer/Footer";
 import Nav from "@/components/Nav/Nav";
 
+const nicolatte = localFont({
+  src: './fonts/Nicolatte-Regular.woff2',
+  weight: '400',
+  style: 'normal',
+  variable: '--f-nicolatte',
+})
+
 const meltmino = localFont({
   src: [
     {
@@ -31,11 +38,20 @@ const meltmino = localFont({
   variable: '--f-meltmino',
 })
 
-const nicolatte = localFont({
-  src: './fonts/Nicolatte-Regular.woff2',
-  weight: '400',
-  style: 'normal',
-  variable: '--f-nicolatte',
+const atkins = localFont({
+  src: [
+    {
+      path: './fonts/AtkinsonHyperlegibleNext-Regular.woff2',
+      weight: '400 700',
+      style: 'normal',
+    },
+    {
+      path: './fonts/AtkinsonHyperlegibleNext-Italic.woff2',
+      weight: '400 700',
+      style: 'italic',
+    },
+  ],
+  variable: '--f-atkins',
 })
 
 export const metadata: Metadata = {
@@ -50,7 +66,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${nicolatte.variable} ${meltmino.className}`}>
+      <body className={`${nicolatte.variable} ${meltmino.variable} ${atkins.variable}`}>
         <Nav />
         {children}
         <Footer />
