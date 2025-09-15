@@ -19,17 +19,15 @@ html,
 body {
   max-width: 100vw;
   overflow-x: hidden;
-  font-size: 16px;
-  line-height: 1.5;
-  letter-spacing: +0.5%;
 }
 
 body {
   color: $c-text;
   background: $c-dark-black;
   font:
-    400 16px var(--f-atkins),
+    400 16px/1.5 var(--f-atkins),
     sans-serif;
+  letter-spacing: +0.5%;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
