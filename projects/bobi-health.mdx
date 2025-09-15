@@ -1,0 +1,38 @@
+import { H2group } from "@/components/MDXComponents/H2group"
+import { Section } from "@/components/MDXComponents/Section"
+import Image from 'next/image'
+
+import mockups from '@/public/images/bobi-health/mockups.webp'
+import surveyData from '@/public/images/bobi-health/surveydata.webp'
+import personas from '@/public/images/bobi-health/personas.webp'
+import devDocumentation from '@/public/images/bobi-health/dev-documentation.webp'
+
+<Section>
+    <H2group eyebrow="The Challenge" heading="From Zero to Investor Showcase" />
+    Bobi was an early-stage startup on a mission to make pregnancy safer. Many pregnant people struggle to know whether symptoms are normal, when to seek care, or how to track their health across appointments. Existing apps focused on journaling and symptom logging, but none offered triage or medically informed recommendations that could help catch and prevent serious complications early on in a pregnancy.
+
+    As lead UX designer, I was responsible for taking Bobi from zero to one hundred—building a polished MVP that could be demoed to investors and tested by real users. We were working with limited funding, a small team, and a tight timeline, to distill complex medical tracking into a simple, informative, and supportive experience.
+
+    <Image src={mockups} alt='Three app screens showing symptom reporting, health dashboard, and fetal kicks tracking.' className='visual'/>
+
+    ## Case Study Coming Soon
+    This case study will walk through how I went from research to launch in a resource-constrained startup environment. I’ll share how user insights shaped the MVP feature set, how I worked with the medical team to balance accuracy with empathy, and the strategies I used to ensure accessibility and inclusivity from the ground up.
+
+    In the meantime, I'd love to walk you through the project on a call, or feel free to look through some of the artifacts and deliverables from the design process below!
+
+    <Image src={surveyData} alt='Survey results showing top needs: clear symptom guidance, knowing when to see a doctor, and sharing data.' className='visual'/>
+    ### Survey results highlighting the most important pregnancy health app features.
+
+    To understand which features mattered most, we surveyed pregnant people and asked them to rank potential app features. The results revealed a strong demand for clear guidance on symptoms, knowing when to see a provider, and ways to share data with healthcare providers.
+
+    <Image src={personas} alt='Three personas: Aisha, high-risk pregnancy; Jasmine, data-driven first-timer; Maria, rural with limited access.' className='visual'/>
+
+    ### Three user personas representing key segments of Bobi’s audience.
+    I created personas grounded in survey and focus group insights to keep diverse user needs at the center of the design process. These profiles helped us balance the perspectives of high-risk pregnancies, limited-access users, and proactive data trackers.
+
+    <Image src={devDocumentation} alt='A Figma workspace showing component documentation for developers.' className='visual'/>
+
+    ### Developer hand-off
+    To ensure a smooth developer handoff, I created detailed documentation in Figma. Each mock-up or component included states, interactions, and annotations so engineers had everything they needed to build with accuracy and consistency.
+
+</Section>
